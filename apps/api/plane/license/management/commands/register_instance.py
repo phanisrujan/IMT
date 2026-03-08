@@ -15,7 +15,6 @@ from django.utils import timezone
 
 # Module imports
 from plane.license.models import Instance, InstanceEdition
-from plane.license.bgtasks.tracer import instance_traces
 
 
 class Command(BaseCommand):
@@ -70,6 +69,7 @@ class Command(BaseCommand):
                 current_version=current_version,
                 latest_version=latest_version,
                 last_checked_at=timezone.now(),
+                is_telemetry_enabled=False,
                 is_test=os.environ.get("IS_TEST", "0") == "1",
                 edition=InstanceEdition.PLANE_COMMUNITY.value,
             )
@@ -82,11 +82,9 @@ class Command(BaseCommand):
             instance.last_checked_at = timezone.now()
             instance.current_version = current_version
             instance.latest_version = latest_version
+            instance.is_telemetry_enabled = False
             instance.is_test = os.environ.get("IS_TEST", "0") == "1"
             instance.edition = InstanceEdition.PLANE_COMMUNITY.value
             instance.save()
-
-        # Call the instance traces task
-        instance_traces.delay()
 
         return

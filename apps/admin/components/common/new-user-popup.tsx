@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present IMT Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -11,8 +11,8 @@ import { useTheme as useNextTheme } from "next-themes";
 import { Button, getButtonStyling } from "@plane/propel/button";
 import { resolveGeneralTheme } from "@plane/utils";
 // hooks
-import TakeoffIconDark from "@/app/assets/logos/takeoff-icon-dark.svg?url";
-import TakeoffIconLight from "@/app/assets/logos/takeoff-icon-light.svg?url";
+import IMTSymbolDark from "@/app/assets/logos/imt-symbol-dark.svg?url";
+import IMTSymbolLight from "@/app/assets/logos/imt-symbol-light.svg?url";
 import { useTheme } from "@/hooks/store";
 // icons
 
@@ -29,7 +29,7 @@ export const NewUserPopup = observer(function NewUserPopup() {
         <div className="grow">
           <div className="text-14 font-semibold">Create workspace</div>
           <div className="py-2 text-13 font-medium text-tertiary">
-            Instance setup done! Welcome to Plane instance portal. Start your journey with by creating your first
+            Instance setup done! Welcome to IMT instance portal. Start your journey with by creating your first
             workspace.
           </div>
           <div className="flex items-center gap-4 pt-2">
@@ -43,10 +43,10 @@ export const NewUserPopup = observer(function NewUserPopup() {
         </div>
         <div className="flex shrink-0 items-center justify-center">
           <img
-            src={resolveGeneralTheme(resolvedTheme) === "dark" ? TakeoffIconDark : TakeoffIconLight}
-            height={80}
-            width={80}
-            alt="Plane icon"
+            src={resolveGeneralTheme(resolvedTheme) === "dark" ? IMTSymbolLight : IMTSymbolDark}
+            height={72}
+            width={96}
+            alt="IMT icon"
           />
         </div>
       </div>

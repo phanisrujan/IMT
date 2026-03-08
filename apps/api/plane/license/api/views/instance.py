@@ -191,7 +191,9 @@ class InstanceEndpoint(BaseAPIView):
     def patch(self, request):
         # Get the instance
         instance = Instance.objects.first()
-        serializer = InstanceSerializer(instance, data=request.data, partial=True)
+        payload = request.data.copy()
+        payload["is_telemetry_enabled"] = False
+        serializer = InstanceSerializer(instance, data=payload, partial=True)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_200_OK)
