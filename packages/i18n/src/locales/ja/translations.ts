@@ -301,7 +301,7 @@ export default {
     "プロジェクト間の課題を特定し、他のビューでは明らかでないサイクル間の依存関係を確認します。",
   analytics: "アナリティクス",
   workspace_invites: "ワークスペースの招待",
-  enter_god_mode: "ゴッドモードに入る",
+  enter_god_mode: "Enter instance admin",
   workspace_logo: "ワークスペースのロゴ",
   new_issue: "新規作業項目",
   your_work: "あなたの作業",

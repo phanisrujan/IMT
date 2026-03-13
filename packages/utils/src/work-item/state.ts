@@ -11,7 +11,7 @@ import type { IState, IStateResponse } from "@plane/types";
 
 export const orderStateGroups = (unorderedStateGroups: IStateResponse | undefined): IStateResponse | undefined => {
   if (!unorderedStateGroups) return undefined;
-  return Object.assign({ backlog: [], unstarted: [], started: [], completed: [], cancelled: [] }, unorderedStateGroups);
+  return Object.assign({ unstarted: [], started: [], backlog: [], completed: [], cancelled: [] }, unorderedStateGroups);
 };
 
 export const sortStates = (states: IState[]) => {

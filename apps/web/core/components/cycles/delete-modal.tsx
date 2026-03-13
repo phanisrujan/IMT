@@ -50,7 +50,7 @@ export const CycleDeleteModal = observer(function CycleDeleteModal(props: ICycle
           setToast({
             type: TOAST_TYPE.SUCCESS,
             title: "Success!",
-            message: "Cycle deleted successfully.",
+            message: "Sprint deleted successfully.",
           });
         })
         .catch((errors) => {

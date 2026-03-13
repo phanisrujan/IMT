@@ -154,14 +154,14 @@ export const WorkItemDetailQuickActions = observer(function WorkItemDetailQuickA
 
   const MENU_ITEMS = baseMenuItems
     .map((item) => {
-      // Customize edit action for work item
+      // Customize edit action for ticket
       if (item.key === "edit") {
         return {
           ...item,
           shouldRender: isEditingAllowed && !isPeekMode,
         };
       }
-      // Customize delete action for work item
+      // Customize delete action for ticket
       if (item.key === "delete") {
         return {
           ...item,

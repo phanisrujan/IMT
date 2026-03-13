@@ -36,7 +36,7 @@ export const generateBarColor = (
               : "#ced4da";
   }
 
-  // State
+  // Status
   if (params.x_axis === ChartXAxisProperty.STATES) {
     if (workspaceStates && workspaceStates.length > 0) {
       const state = workspaceStates.find((s) => s.id === value);

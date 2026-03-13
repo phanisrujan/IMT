@@ -64,7 +64,7 @@ export function CycleCreateUpdateModal(props: CycleModalProps) {
         setToast({
           type: TOAST_TYPE.SUCCESS,
           title: "Success!",
-          message: "Cycle created successfully.",
+          message: "Sprint created successfully.",
         });
       })
       .catch((err) => {
@@ -85,7 +85,7 @@ export function CycleCreateUpdateModal(props: CycleModalProps) {
         setToast({
           type: TOAST_TYPE.SUCCESS,
           title: "Success!",
-          message: "Cycle updated successfully.",
+          message: "Sprint updated successfully.",
         });
       })
       .catch((err) => {

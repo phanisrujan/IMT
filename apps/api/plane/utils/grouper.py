@@ -191,7 +191,7 @@ def issue_group_values(
         return ["low", "medium", "high", "urgent", "none"]
 
     if field == "state__group":
-        return ["backlog", "unstarted", "started", "completed", "cancelled"]
+        return ["unstarted", "started", "backlog", "completed", "cancelled"]
 
     if field == "target_date":
         queryset = queryset.values_list("target_date", flat=True).distinct()

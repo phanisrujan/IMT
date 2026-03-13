@@ -304,7 +304,7 @@ export default {
     "Phát hiện thách thức từ dự án này sang dự án khác và xem các phụ thuộc giữa các chu kỳ không dễ thấy từ các chế độ xem khác.",
   analytics: "Phân tích",
   workspace_invites: "Lời mời không gian làm việc",
-  enter_god_mode: "Vào chế độ quản trị viên",
+  enter_god_mode: "Enter instance admin",
   workspace_logo: "Logo không gian làm việc",
   new_issue: "Mục công việc mới",
   your_work: "Công việc của tôi",

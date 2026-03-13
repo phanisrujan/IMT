@@ -24,7 +24,7 @@ export const getProjectFeatureNavigation = (
   {
     i18n_key: "sidebar.work_items",
     key: EProjectFeatureKey.WORK_ITEMS,
-    name: "Work items",
+    name: "Tickets",
     href: `/${workspaceSlug}/projects/${projectId}/issues`,
     icon: WorkItemsIcon,
     access: [EUserPermissions.ADMIN, EUserPermissions.MEMBER, EUserPermissions.GUEST],
@@ -34,7 +34,7 @@ export const getProjectFeatureNavigation = (
   {
     i18n_key: "sidebar.cycles",
     key: EProjectFeatureKey.CYCLES,
-    name: "Cycles",
+    name: "Sprints",
     href: `/${workspaceSlug}/projects/${projectId}/cycles`,
     icon: CycleIcon,
     access: [EUserPermissions.ADMIN, EUserPermissions.MEMBER],

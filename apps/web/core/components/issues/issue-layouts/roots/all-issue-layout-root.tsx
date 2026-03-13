@@ -52,7 +52,7 @@ export const AllIssueLayoutRoot = observer(function AllIssueLayoutRoot(props: Pr
   const viewDetails = globalViewId ? getViewDetailsById(globalViewId) : undefined;
   const workItemFilters = globalViewId ? filters?.[globalViewId] : undefined;
   const activeLayout: EIssueLayoutTypes | undefined = workItemFilters?.displayFilters?.layout;
-  // Determine initial work item filters based on view type and availability
+  // Determine initial ticket filters based on view type and availability
   const initialWorkItemFilters = useMemo(() => {
     if (!globalViewId) return undefined;
 
@@ -121,7 +121,7 @@ export const AllIssueLayoutRoot = observer(function AllIssueLayoutRoot(props: Pr
         assetKey="view"
         actions={[
           {
-            label: "Go to All work items",
+            label: "Go to All tickets",
             onClick: () => router.push(`/${workspaceSlug}/workspace-views/all-issues`),
             variant: "primary",
           },

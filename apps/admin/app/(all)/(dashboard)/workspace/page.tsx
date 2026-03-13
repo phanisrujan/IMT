@@ -125,8 +125,8 @@ const WorkspaceManagementPage = observer(function WorkspaceManagementPage(_props
                   )}
                 </div>
                 <div className={cn("text-11 leading-5 font-regular text-tertiary")}>
-                  You can&apos;t yet delete workspaces and you can only go to the workspace if you are an Admin or a
-                  Member.
+                  This panel is for governance. Delete workspace from that workspace&apos;s settings. If you are not a
+                  member yet, use &quot;Grant me admin access&quot; and then open it.
                 </div>
               </div>
               <div className="flex items-center gap-2">
@@ -167,6 +167,6 @@ const WorkspaceManagementPage = observer(function WorkspaceManagementPage(_props
   );
 });
 
-export const meta: Route.MetaFunction = () => [{ title: "Workspace Management - God Mode" }];
+export const meta: Route.MetaFunction = () => [{ title: "Workspace Management - Instance Admin" }];
 
 export default WorkspaceManagementPage;

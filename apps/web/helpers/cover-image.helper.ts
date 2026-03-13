@@ -279,7 +279,7 @@ export const handleCoverImageChange = async (
     }
   }
 
-  // External/uploaded asset (e.g., Unsplash URL, pre-uploaded asset)
+  // External/uploaded asset URL
   // Return the URL to be saved in the backend
   return {
     cover_image: newImage,

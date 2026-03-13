@@ -66,11 +66,11 @@ export const InboxIssueContentProperties = observer(function InboxIssueContentPr
         <h5 className="mb-2 text-body-sm-medium">Properties</h5>
         <div className={`divide-y-2 divide-subtle-1 ${!isEditable ? "opacity-60" : ""}`}>
           <div className="flex flex-col gap-3">
-            {/* Intake State */}
+            {/* Intake Status */}
             <div className="flex h-8 items-center gap-2">
               <div className="flex w-2/5 flex-shrink-0 items-center gap-1 text-13 text-tertiary">
                 <StatePropertyIcon className="h-4 w-4 flex-shrink-0" />
-                <span>State</span>
+                <span>Status</span>
               </div>
               {issue?.state_id && (
                 <DropdownComponent

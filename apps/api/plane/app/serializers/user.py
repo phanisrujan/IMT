@@ -19,6 +19,8 @@ class UserSerializer(BaseSerializer):
         return value
 
     def validate_last_name(self, value):
+        if not value or str(value).strip() == "":
+            raise serializers.ValidationError("Last name is required.")
         if contains_url(value):
             raise serializers.ValidationError("Last name cannot contain a URL.")
         return value

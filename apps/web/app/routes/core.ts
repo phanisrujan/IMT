@@ -62,7 +62,7 @@ export const coreRoutes: RouteConfigEntry[] = [
         // Workspace Home
         route(":workspaceSlug", "./(all)/[workspaceSlug]/(projects)/page.tsx"),
 
-        // Active Cycles
+        // Active Sprints
         layout("./(all)/[workspaceSlug]/(projects)/active-cycles/layout.tsx", [
           route(":workspaceSlug/active-cycles", "./(all)/[workspaceSlug]/(projects)/active-cycles/page.tsx"),
         ]),
@@ -146,7 +146,7 @@ export const coreRoutes: RouteConfigEntry[] = [
             "./(all)/[workspaceSlug]/(projects)/projects/(detail)/[projectId]/issues/(detail)/[issueId]/page.tsx"
           ),
 
-          // Cycle Detail
+          // Sprint Detail
           layout("./(all)/[workspaceSlug]/(projects)/projects/(detail)/[projectId]/cycles/(detail)/layout.tsx", [
             route(
               ":workspaceSlug/projects/:projectId/cycles/:cycleId",
@@ -154,7 +154,7 @@ export const coreRoutes: RouteConfigEntry[] = [
             ),
           ]),
 
-          // Cycles List
+          // Sprints List
           layout("./(all)/[workspaceSlug]/(projects)/projects/(detail)/[projectId]/cycles/(list)/layout.tsx", [
             route(
               ":workspaceSlug/projects/:projectId/cycles",
@@ -218,7 +218,7 @@ export const coreRoutes: RouteConfigEntry[] = [
           ]),
         ]),
 
-        // Project Archives - Issues, Cycles, Modules
+        // Project Archives - Issues, Sprints, Modules
         // Project Archives - Issues - List
         layout("./(all)/[workspaceSlug]/(projects)/projects/(detail)/[projectId]/archives/issues/(list)/layout.tsx", [
           route(
@@ -235,7 +235,7 @@ export const coreRoutes: RouteConfigEntry[] = [
           ),
         ]),
 
-        // Project Archives - Cycles
+        // Project Archives - Sprints
         layout("./(all)/[workspaceSlug]/(projects)/projects/(detail)/[projectId]/archives/cycles/layout.tsx", [
           route(
             ":workspaceSlug/projects/:projectId/archives/cycles",
@@ -323,7 +323,7 @@ export const coreRoutes: RouteConfigEntry[] = [
               ":workspaceSlug/settings/projects/:projectId/features/intake",
               "./(all)/[workspaceSlug]/(settings)/settings/projects/[projectId]/features/intake/page.tsx"
             ),
-            // Project States
+            // Project Status
             route(
               ":workspaceSlug/settings/projects/:projectId/states",
               "./(all)/[workspaceSlug]/(settings)/settings/projects/[projectId]/states/page.tsx"

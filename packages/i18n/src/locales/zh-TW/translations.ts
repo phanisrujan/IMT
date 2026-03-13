@@ -294,7 +294,7 @@ export default {
   stay_ahead_of_blockers_description: "發現跨專案的挑戰，並檢視其他檢視無法明顯看出的週期間相依性。",
   analytics: "分析",
   workspace_invites: "工作區邀請",
-  enter_god_mode: "進入管理員模式",
+  enter_god_mode: "Enter instance admin",
   workspace_logo: "工作區標誌",
   new_issue: "新增工作事項",
   your_work: "您的工作",

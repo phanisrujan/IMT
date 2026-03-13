@@ -100,7 +100,7 @@ export const meta: Route.MetaFunction = () => [
   { property: "og:title", content: APP_TITLE },
   {
     property: "og:description",
-    content: "Self-hosted issue and project management for work items, cycles, and product roadmaps.",
+    content: "Self-hosted issue and project management for tickets, cycles, and product roadmaps.",
   },
   { property: "og:url", content: "https://github.com/phanisrujan/IMT" },
   { property: "og:image", content: ogImage },
@@ -110,7 +110,7 @@ export const meta: Route.MetaFunction = () => [
   {
     name: "keywords",
     content:
-      "software development, plan, ship, software, accelerate, code management, release management, project management, work item tracking, agile, scrum, kanban, collaboration",
+      "software development, plan, ship, software, accelerate, code management, release management, project management, ticket tracking, agile, scrum, kanban, collaboration",
   },
   { name: "twitter:site", content: "@IMT" },
   { name: "twitter:card", content: "summary_large_image" },

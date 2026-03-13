@@ -30,7 +30,7 @@ export const useWorkspaceIssueProperties = (workspaceSlug: string | string[] | u
     { revalidateIfStale: false, revalidateOnFocus: false }
   );
 
-  // fetch workspace Cycles
+  // fetch workspace Sprints
   useSWR(
     workspaceSlug ? WORKSPACE_CYCLES(workspaceSlug.toString()) : null,
     workspaceSlug ? () => fetchWorkspaceCycles(workspaceSlug.toString()) : null,

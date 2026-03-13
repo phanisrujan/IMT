@@ -38,7 +38,7 @@ export const POWER_K_SEARCH_RESULTS_GROUPS_MAP: Record<TPowerKSearchResultsKeys,
     ),
     path: (cycle: IWorkspaceDefaultSearchResult) =>
       `/${cycle?.workspace__slug}/projects/${cycle?.project_id}/cycles/${cycle?.id}`,
-    title: "Cycles",
+    title: "Sprints",
   },
   issue: {
     itemName: (workItem: IWorkspaceIssueSearchResult) => (
@@ -61,7 +61,7 @@ export const POWER_K_SEARCH_RESULTS_GROUPS_MAP: Record<TPowerKSearchResultsKeys,
         projectIdentifier: workItem.project__identifier,
         sequenceId: workItem?.sequence_id,
       }),
-    title: "Work items",
+    title: "Tickets",
   },
   issue_view: {
     icon: Layers,

@@ -1,7 +1,7 @@
 {
   "name": "IMT Publish",
   "short_name": "IMT Publish",
-  "description": "IMT Publish helps you share work items, cycles, and project updates.",
+  "description": "IMT Publish helps you share tickets, cycles, and project updates.",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#f9fafb",

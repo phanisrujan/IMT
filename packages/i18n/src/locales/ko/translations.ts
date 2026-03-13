@@ -298,7 +298,7 @@ export default {
     "프로젝트 간의 문제를 파악하고 다른 뷰에서 명확하지 않은 주기 간의 종속성을 확인합니다.",
   analytics: "분석",
   workspace_invites: "작업 공간 초대",
-  enter_god_mode: "갓 모드로 전환",
+  enter_god_mode: "Enter instance admin",
   workspace_logo: "작업 공간 로고",
   new_issue: "새 작업 항목",
   your_work: "나의 작업",

@@ -73,7 +73,7 @@ export const ProjectNavigation = observer(function ProjectNavigation(props: TPro
       {
         i18n_key: "sidebar.work_items",
         key: "work_items",
-        name: "Work items",
+        name: "Tickets",
         href: `/${workspaceSlug}/projects/${projectId}/issues`,
         icon: WorkItemsIcon,
         access: [EUserPermissions.ADMIN, EUserPermissions.MEMBER, EUserPermissions.GUEST],
@@ -83,7 +83,7 @@ export const ProjectNavigation = observer(function ProjectNavigation(props: TPro
       {
         i18n_key: "sidebar.cycles",
         key: "cycles",
-        name: "Cycles",
+        name: "Sprints",
         href: `/${workspaceSlug}/projects/${projectId}/cycles`,
         icon: CycleIcon,
         access: [EUserPermissions.ADMIN, EUserPermissions.MEMBER],
@@ -156,7 +156,7 @@ export const ProjectNavigation = observer(function ProjectNavigation(props: TPro
 
   const isActive = useCallback(
     (item: TNavigationItem) => {
-      // work item condition
+      // ticket condition
       const workItemCondition = workItemId && workItem && !workItem?.is_epic && workItem?.project_id === projectId;
       // epic condition
       const epicCondition = workItemId && workItem && workItem?.is_epic && workItem?.project_id === projectId;

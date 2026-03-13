@@ -44,7 +44,7 @@ export const FiltersToggle = observer(function FiltersToggle<P extends TFilterPr
   const activeFilterBaseClasses =
     "text-accent-primary border border-accent-subtle-1 hover:border-accent-subtle-1 active:border-accent-subtle-1 focus:border-accent-subtle-1";
 
-  // State classes that prevent hover/active/focus color changes
+  // Status classes that prevent hover/active/focus color changes
   const noHoverStateClasses = "hover:text-accent-primary active:text-accent-primary focus:text-accent-primary";
 
   // Background classes based on toggle state (darker when open, lighter when closed)

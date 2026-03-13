@@ -295,7 +295,7 @@ def filter_completed_at(params, issue_filter, method, prefix=""):
 
 def filter_issue_state_type(params, issue_filter, method, prefix=""):
     type = params.get("type", "all")
-    group = ["backlog", "unstarted", "started", "completed", "cancelled"]
+    group = ["unstarted", "started", "backlog", "completed", "cancelled"]
     if type == "backlog":
         group = ["backlog"]
     if type == "active":

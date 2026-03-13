@@ -308,7 +308,7 @@ export default {
   stay_ahead_of_blockers_description: "Выявление проблем между проектами и скрытых зависимостей между циклами.",
   analytics: "Аналитика",
   workspace_invites: "Приглашения в рабочее пространство",
-  enter_god_mode: "Режим администратора",
+  enter_god_mode: "Enter instance admin",
   workspace_logo: "Логотип рабочего пространства",
   new_issue: "Новый рабочий элемент",
   your_work: "Ваша работа",

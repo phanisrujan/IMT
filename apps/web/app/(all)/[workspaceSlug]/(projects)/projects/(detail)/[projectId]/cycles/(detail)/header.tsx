@@ -142,7 +142,7 @@ export const CycleIssuesHeader = observer(function CycleIssuesHeader() {
               <Breadcrumbs.Item
                 component={
                   <BreadcrumbLink
-                    label="Cycles"
+                    label="Sprints"
                     href={`/${workspaceSlug}/projects/${projectId}/cycles/`}
                     icon={<CycleIcon className="h-4 w-4 text-tertiary" />}
                   />
@@ -172,7 +172,7 @@ export const CycleIssuesHeader = observer(function CycleIssuesHeader() {
               <Tooltip
                 isMobile={isMobile}
                 tooltipContent={`There are ${workItemsCount} ${
-                  workItemsCount > 1 ? "work items" : "work item"
+                  workItemsCount > 1 ? "tickets" : "ticket"
                 } in this cycle`}
                 position="bottom"
               >

@@ -94,53 +94,53 @@ export default {
   failed_to_update_the_theme: "Failed to update the theme",
   email_notifications: "Email notifications",
   stay_in_the_loop_on_issues_you_are_subscribed_to_enable_this_to_get_notified:
-    "Stay in the loop on Work items you are subscribed to. Enable this to get notified.",
+    "Stay in the loop on Tickets you are subscribed to. Enable this to get notified.",
   email_notification_setting_updated_successfully: "Email notification setting updated successfully",
   failed_to_update_email_notification_setting: "Failed to update email notification setting",
   notify_me_when: "Notify me when",
   property_changes: "Property changes",
   property_changes_description:
-    "Notify me when work items' properties like assignees, priority, estimates or anything else changes.",
-  state_change: "State change",
-  state_change_description: "Notify me when the work items moves to a different state",
-  issue_completed: "Work item completed",
-  issue_completed_description: "Notify me only when a work item is completed",
+    "Notify me when tickets' properties like assignees, priority, estimates or anything else changes.",
+  state_change: "Status change",
+  state_change_description: "Notify me when tickets move to a different status",
+  issue_completed: "Ticket completed",
+  issue_completed_description: "Notify me only when a ticket is completed",
   comments: "Comments",
-  comments_description: "Notify me when someone leaves a comment on the work item",
+  comments_description: "Notify me when someone leaves a comment on the ticket",
   mentions: "Mentions",
   mentions_description: "Notify me only when someone mentions me in the comments or description",
   old_password: "Old password",
   general_settings: "General settings",
   sign_out: "Sign out",
   signing_out: "Signing out",
-  active_cycles: "Active cycles",
+  active_cycles: "Active sprints",
   active_cycles_description:
-    "Monitor cycles across projects, track high-priority work items, and zoom in cycles that need attention.",
-  on_demand_snapshots_of_all_your_cycles: "On-demand snapshots of all your cycles",
+    "Monitor sprints across projects, track high-priority tickets, and zoom in on sprints that need attention.",
+  on_demand_snapshots_of_all_your_cycles: "On-demand snapshots of all your sprints",
   upgrade: "Upgrade",
-  "10000_feet_view": "10,000-feet view of all active cycles.",
+  "10000_feet_view": "10,000-feet view of all active sprints.",
   "10000_feet_view_description":
-    "Zoom out to see running cycles across all your projects at once instead of going from Cycle to Cycle in each project.",
-  get_snapshot_of_each_active_cycle: "Get a snapshot of each active cycle.",
+    "Zoom out to see running sprints across all your projects at once instead of going from Sprint to Sprint in each project.",
+  get_snapshot_of_each_active_cycle: "Get a snapshot of each active sprint.",
   get_snapshot_of_each_active_cycle_description:
-    "Track high-level metrics for all active cycles, see their state of progress, and get a sense of scope against deadlines.",
+    "Track high-level metrics for all active sprints, see their progress status, and get a sense of scope against deadlines.",
   compare_burndowns: "Compare burndowns.",
   compare_burndowns_description:
-    "Monitor how each of your teams are performing with a peek into each cycle's burndown report.",
-  quickly_see_make_or_break_issues: "Quickly see make-or-break work items.",
+    "Monitor how each of your teams are performing with a peek into each sprint's burndown report.",
+  quickly_see_make_or_break_issues: "Quickly see make-or-break tickets.",
   quickly_see_make_or_break_issues_description:
-    "Preview high-priority work items for each cycle against due dates. See all of them per cycle in one click.",
-  zoom_into_cycles_that_need_attention: "Zoom into cycles that need attention.",
+    "Preview high-priority tickets for each sprint against due dates. See all of them per sprint in one click.",
+  zoom_into_cycles_that_need_attention: "Zoom into sprints that need attention.",
   zoom_into_cycles_that_need_attention_description:
-    "Investigate the state of any cycle that doesn't conform to expectations in one click.",
+    "Investigate the status of any sprint that doesn't conform to expectations in one click.",
   stay_ahead_of_blockers: "Stay ahead of blockers.",
   stay_ahead_of_blockers_description:
-    "Spot challenges from one project to another and see inter-cycle dependencies that aren't obvious from any other view.",
+    "Spot challenges from one project to another and see inter-sprint dependencies that aren't obvious from any other view.",
   analytics: "Analytics",
   workspace_invites: "Workspace invites",
-  enter_god_mode: "Enter god mode",
+  enter_god_mode: "Enter instance admin",
   workspace_logo: "Workspace logo",
-  new_issue: "New work item",
+  new_issue: "New ticket",
   your_work: "Your work",
   drafts: "Drafts",
   projects: "Projects",
@@ -168,7 +168,7 @@ export default {
   create_project: "Create project",
   failed_to_remove_project_from_favorites: "Couldn't remove the project from favorites. Please try again.",
   project_created_successfully: "Project created successfully",
-  project_created_successfully_description: "Project created successfully. You can now start adding work items to it.",
+  project_created_successfully_description: "Project created successfully. You can now start adding tickets to it.",
   project_name_already_taken: "The project name is already taken.",
   project_identifier_already_taken: "The project identifier is already taken.",
   project_cover_image_alt: "Project cover image",
@@ -178,7 +178,7 @@ export default {
   project_id_must_be_at_least_1_character: "Project ID must at least be of 1 character",
   project_id_must_be_at_most_5_characters: "Project ID must at most be of 5 characters",
   project_id: "Project ID",
-  project_id_tooltip_content: "Helps you identify work items in the project uniquely. Max 10 characters.",
+  project_id_tooltip_content: "Helps you identify tickets in the project uniquely. Max 10 characters.",
   description_placeholder: "Description",
   only_alphanumeric_non_latin_characters_allowed: "Only Alphanumeric & Non-latin characters are allowed.",
   project_id_is_required: "Project ID is required",
@@ -211,22 +211,22 @@ export default {
   drag_to_rearrange: "Drag to rearrange",
   congrats: "Congrats!",
   open_project: "Open project",
-  issues: "Work items",
-  cycles: "Cycles",
+  issues: "Tickets",
+  cycles: "Sprints",
   modules: "Modules",
   pages: "Pages",
   intake: "Intake",
   time_tracking: "Time Tracking",
   work_management: "Work management",
-  projects_and_issues: "Projects and work items",
+  projects_and_issues: "Projects and tickets",
   projects_and_issues_description: "Toggle these on or off this project.",
   cycles_description:
-    "Timebox work per project and adjust the time period as needed. One cycle can be 2 weeks, the next 1 week.",
+    "Timebox work per project and adjust the time period as needed. One sprint can be 2 weeks, the next 1 week.",
   modules_description: "Organize work into sub-projects with dedicated leads and assignees.",
   views_description: "Save custom sorts, filters, and display options or share them with your team.",
   pages_description: "Create and edit free-form content; notes, docs, anything.",
   intake_description: "Let non-members share bugs, feedback, and suggestions; without disrupting your workflow.",
-  time_tracking_description: "Log time spent on work items and projects.",
+  time_tracking_description: "Log time spent on tickets and projects.",
   work_management_description: "Manage your work and projects with ease.",
   documentation: "Documentation",
   message_support: "Message support",
@@ -259,34 +259,34 @@ export default {
   workspace_name: "workspace-name",
   deactivate_your_account: "Deactivate your account",
   deactivate_your_account_description:
-    "Once deactivated, you can't be assigned work items and be billed for your workspace. To reactivate your account, you will need an invite to a workspace at this email address.",
+    "Once deactivated, you can't be assigned tickets and be billed for your workspace. To reactivate your account, you will need an invite to a workspace at this email address.",
   deactivating: "Deactivating",
   confirm: "Confirm",
   confirming: "Confirming",
   draft_created: "Draft created",
-  issue_created_successfully: "Work item created successfully",
+  issue_created_successfully: "Ticket created successfully",
   draft_creation_failed: "Draft creation failed",
-  issue_creation_failed: "Work item creation failed",
-  draft_issue: "Draft work item",
-  issue_updated_successfully: "Work item updated successfully",
-  issue_could_not_be_updated: "Work item could not be updated",
+  issue_creation_failed: "Ticket creation failed",
+  draft_issue: "Draft ticket",
+  issue_updated_successfully: "Ticket updated successfully",
+  issue_could_not_be_updated: "Ticket could not be updated",
   create_a_draft: "Create a draft",
   save_to_drafts: "Save to Drafts",
   save: "Save",
   update: "Update",
   updating: "Updating",
-  create_new_issue: "Create new work item",
+  create_new_issue: "Create new ticket",
   editor_is_not_ready_to_discard_changes: "Editor is not ready to discard changes",
-  failed_to_move_issue_to_project: "Failed to move work item to project",
+  failed_to_move_issue_to_project: "Failed to move ticket to project",
   create_more: "Create more",
   add_to_project: "Add to project",
   discard: "Discard",
-  duplicate_issue_found: "Duplicate work item found",
-  duplicate_issues_found: "Duplicate work items found",
+  duplicate_issue_found: "Duplicate ticket found",
+  duplicate_issues_found: "Duplicate tickets found",
   no_matching_results: "No matching results",
   title_is_required: "Title is required",
   title: "Title",
-  state: "State",
+  state: "Status",
   priority: "Priority",
   none: "None",
   urgent: "Urgent",
@@ -303,8 +303,8 @@ export default {
   end_date: "End date",
   due_date: "Due date",
   estimate: "Estimate",
-  change_parent_issue: "Change parent work item",
-  remove_parent_issue: "Remove parent work item",
+  change_parent_issue: "Change parent ticket",
+  remove_parent_issue: "Remove parent ticket",
   add_parent: "Add parent",
   loading_members: "Loading members",
   view_link_copied_to_clipboard: "View link copied to clipboard.",
@@ -327,15 +327,15 @@ export default {
   show_less: "Show less",
   no_data_yet: "No Data yet",
   syncing: "Syncing",
-  add_work_item: "Add work item",
+  add_work_item: "Add ticket",
   advanced_description_placeholder: "Press '/' for commands",
-  create_work_item: "Create work item",
+  create_work_item: "Create ticket",
   attachments: "Attachments",
   declining: "Declining",
   declined: "Declined",
   decline: "Decline",
   unassigned: "Unassigned",
-  work_items: "Work items",
+  work_items: "Tickets",
   add_link: "Add link",
   points: "Points",
   no_assignee: "No assignee",
@@ -445,14 +445,14 @@ export default {
       empty: {
         project: "Your recent projects will appear here once you visit one.",
         page: "Your recent pages will appear here once you visit one.",
-        issue: "Your recent work items will appear here once you visit one.",
+        issue: "Your recent tickets will appear here once you visit one.",
         default: "You don't have any recents yet.",
       },
       filters: {
         all: "All",
         projects: "Projects",
         pages: "Pages",
-        issues: "Work items",
+        issues: "Tickets",
       },
     },
     new_at_plane: {
@@ -486,16 +486,16 @@ export default {
     all: "All",
     no_items_in_this_group: "No items in this group",
     drop_here_to_move: "Drop here to move",
-    states: "States",
-    state: "State",
-    state_groups: "State groups",
-    state_group: "State group",
+    states: "Status",
+    state: "Status",
+    state_groups: "Status groups",
+    state_group: "Status group",
     priorities: "Priorities",
     priority: "Priority",
     team_project: "Team project",
     project: "Project",
-    cycle: "Cycle",
-    cycles: "Cycles",
+    cycle: "Sprint",
+    cycles: "Sprints",
     module: "Module",
     modules: "Modules",
     labels: "Labels",
@@ -528,9 +528,9 @@ export default {
     group_by: "Group by",
     epic: "Epic",
     epics: "Epics",
-    work_item: "Work item",
-    work_items: "Work items",
-    sub_work_item: "Sub-work item",
+    work_item: "Ticket",
+    work_items: "Tickets",
+    sub_work_item: "Sub-ticket",
     add: "Add",
     warning: "Warning",
     updating: "Updating",
@@ -569,7 +569,7 @@ export default {
       private: "Private",
     },
     done: "Done",
-    sub_work_items: "Sub-work items",
+    sub_work_items: "Sub-tickets",
     comment: "Comment",
     workspace_level: "Workspace level",
     order_by: {
@@ -595,8 +595,8 @@ export default {
     copied: "Copied!",
     link_copied: "Link copied!",
     link_copied_to_clipboard: "Link copied to clipboard",
-    copied_to_clipboard: "Work item link copied to clipboard",
-    is_copied_to_clipboard: "Work item is copied to clipboard",
+    copied_to_clipboard: "Ticket link copied to clipboard",
+    is_copied_to_clipboard: "Ticket is copied to clipboard",
     no_links_added_yet: "No links added yet",
     add_link: "Add link",
     links: "Links",
@@ -806,50 +806,50 @@ export default {
     },
   },
   issue: {
-    label: "{count, plural, one {Work item} other {Work items}}",
-    all: "All Work items",
-    edit: "Edit work item",
+    label: "{count, plural, one {Ticket} other {Tickets}}",
+    all: "All Tickets",
+    edit: "Edit ticket",
     title: {
-      label: "Work item title",
-      required: "Work item title is required.",
+      label: "Ticket title",
+      required: "Ticket title is required.",
     },
     add: {
-      press_enter: "Press 'Enter' to add another work item",
-      label: "Add work item",
+      press_enter: "Press 'Enter' to add another ticket",
+      label: "Add ticket",
       cycle: {
-        failed: "Work item could not be added to the cycle. Please try again.",
-        success: "{count, plural, one {Work item} other {Work items}} added to the cycle successfully.",
-        loading: "Adding {count, plural, one {work item} other {work items}} to the cycle",
+        failed: "Ticket could not be added to the sprint. Please try again.",
+        success: "{count, plural, one {Ticket} other {Tickets}} added to the sprint successfully.",
+        loading: "Adding {count, plural, one {ticket} other {tickets}} to the sprint",
       },
       assignee: "Add assignees",
       start_date: "Add start date",
       due_date: "Add due date",
-      parent: "Add parent work item",
-      sub_issue: "Add sub-work item",
+      parent: "Add parent ticket",
+      sub_issue: "Add sub-ticket",
       relation: "Add relation",
       link: "Add link",
-      existing: "Add existing work item",
+      existing: "Add existing ticket",
     },
     remove: {
-      label: "Remove work item",
+      label: "Remove ticket",
       cycle: {
-        loading: "Removing work item from the cycle",
-        success: "Work item removed from the cycle successfully.",
-        failed: "Work item could not be removed from the cycle. Please try again.",
+        loading: "Removing ticket from the sprint",
+        success: "Ticket removed from the sprint successfully.",
+        failed: "Ticket could not be removed from the sprint. Please try again.",
       },
       module: {
-        loading: "Removing work item from the module",
-        success: "Work item removed from the module successfully.",
-        failed: "Work item could not be removed from the module. Please try again.",
+        loading: "Removing ticket from the module",
+        success: "Ticket removed from the module successfully.",
+        failed: "Ticket could not be removed from the module. Please try again.",
       },
       parent: {
-        label: "Remove parent work item",
+        label: "Remove parent ticket",
       },
     },
-    new: "New work item",
-    adding: "Adding work item",
+    new: "New ticket",
+    adding: "Adding ticket",
     create: {
-      success: "Work item created successfully",
+      success: "Ticket created successfully",
     },
     priority: {
       urgent: "Urgent",
@@ -861,15 +861,15 @@ export default {
       properties: {
         label: "Display Properties",
         id: "ID",
-        issue_type: "Work item Type",
-        sub_issue_count: "Sub-work item count",
+        issue_type: "Ticket Type",
+        sub_issue_count: "Sub-ticket count",
         attachment_count: "Attachment count",
         created_on: "Created on",
-        sub_issue: "Sub-work item",
-        work_item_count: "Work item count",
+        sub_issue: "Sub-ticket",
+        work_item_count: "Ticket count",
       },
       extra: {
-        show_sub_issues: "Show sub-work items",
+        show_sub_issues: "Show sub-tickets",
         show_empty_groups: "Show empty groups",
       },
     },
@@ -890,7 +890,7 @@ export default {
     },
     states: {
       active: "Active",
-      backlog: "Backlog",
+      backlog: "Validation",
     },
     comments: {
       placeholder: "Add comment",
@@ -920,36 +920,36 @@ export default {
     },
     empty_state: {
       issue_detail: {
-        title: "Work item does not exist",
-        description: "The work item you are looking for does not exist, has been archived, or has been deleted.",
+        title: "Ticket does not exist",
+        description: "The ticket you are looking for does not exist, has been archived, or has been deleted.",
         primary_button: {
-          text: "View other work items",
+          text: "View other tickets",
         },
       },
     },
     sibling: {
-      label: "Sibling work items",
+      label: "Sibling tickets",
     },
     archive: {
-      description: "Only completed or canceled\nwork items can be archived",
-      label: "Archive Work item",
+      description: "Only completed or canceled\ntickets can be archived",
+      label: "Archive Ticket",
       confirm_message:
-        "Are you sure you want to archive the work item? All your archived work items can be restored later.",
+        "Are you sure you want to archive the ticket? All your archived tickets can be restored later.",
       success: {
         label: "Archive success",
         message: "Your archives can be found in project archives.",
       },
       failed: {
-        message: "Work item could not be archived. Please try again.",
+        message: "Ticket could not be archived. Please try again.",
       },
     },
     restore: {
       success: {
         title: "Restore success",
-        message: "Your work item can be found in project work items.",
+        message: "Your ticket can be found in project tickets.",
       },
       failed: {
-        message: "Work item could not be restored. Please try again.",
+        message: "Ticket could not be restored. Please try again.",
       },
     },
     relation: {
@@ -958,25 +958,25 @@ export default {
       blocked_by: "Blocked by",
       blocking: "Blocking",
     },
-    copy_link: "Copy work item link",
+    copy_link: "Copy ticket link",
     delete: {
-      label: "Delete work item",
-      error: "Error deleting work item",
+      label: "Delete ticket",
+      error: "Error deleting ticket",
     },
     subscription: {
       actions: {
-        subscribed: "Work item subscribed successfully",
-        unsubscribed: "Work item unsubscribed successfully",
+        subscribed: "Ticket subscribed successfully",
+        unsubscribed: "Ticket unsubscribed successfully",
       },
     },
     select: {
-      error: "Please select at least one work item",
-      empty: "No work items selected",
-      add_selected: "Add selected work items",
+      error: "Please select at least one ticket",
+      empty: "No tickets selected",
+      add_selected: "Add selected tickets",
       select_all: "Select all",
       deselect_all: "Deselect all",
     },
-    open_in_full_screen: "Open work item in full screen",
+    open_in_full_screen: "Open ticket in full screen",
   },
   attachment: {
     error: "File could not be attached. Try uploading again.",
@@ -996,22 +996,22 @@ export default {
   },
   sub_work_item: {
     update: {
-      success: "Sub-work item updated successfully",
-      error: "Error updating sub-work item",
+      success: "Sub-ticket updated successfully",
+      error: "Error updating sub-ticket",
     },
     remove: {
-      success: "Sub-work item removed successfully",
-      error: "Error removing sub-work item",
+      success: "Sub-ticket removed successfully",
+      error: "Error removing sub-ticket",
     },
     empty_state: {
       sub_list_filters: {
-        title: "You don't have sub-work items that match the filters you've applied.",
-        description: "To see all sub-work items, clear all applied filters.",
+        title: "You don't have sub-tickets that match the filters you've applied.",
+        description: "To see all sub-tickets, clear all applied filters.",
         action: "Clear filters",
       },
       list_filters: {
-        title: "You don't have work items that match the filters you've applied.",
-        description: "To see all work items, clear all applied filters.",
+        title: "You don't have tickets that match the filters you've applied.",
+        description: "To see all tickets, clear all applied filters.",
         action: "Clear filters",
       },
     },
@@ -1050,30 +1050,30 @@ export default {
     },
     modals: {
       decline: {
-        title: "Decline work item",
-        content: "Are you sure you want to decline work item {value}?",
+        title: "Decline ticket",
+        content: "Are you sure you want to decline ticket {value}?",
       },
       delete: {
-        title: "Delete work item",
-        content: "Are you sure you want to delete work item {value}?",
-        success: "Work item deleted successfully",
+        title: "Delete ticket",
+        content: "Are you sure you want to delete ticket {value}?",
+        success: "Ticket deleted successfully",
       },
     },
     errors: {
-      snooze_permission: "Only project admins can snooze/Un-snooze work items",
-      accept_permission: "Only project admins can accept work items",
-      decline_permission: "Only project admins can deny work items",
+      snooze_permission: "Only project admins can snooze/Un-snooze tickets",
+      accept_permission: "Only project admins can accept tickets",
+      decline_permission: "Only project admins can deny tickets",
     },
     actions: {
       accept: "Accept",
       decline: "Decline",
       snooze: "Snooze",
       unsnooze: "Un snooze",
-      copy: "Copy work item link",
+      copy: "Copy ticket link",
       delete: "Delete",
-      open: "Open work item",
+      open: "Open ticket",
       mark_as_duplicate: "Mark as duplicate",
-      move: "Move {value} to project work items",
+      move: "Move {value} to project tickets",
     },
     source: {
       "in-app": "in-app",
@@ -1086,7 +1086,7 @@ export default {
     label: "Intake",
     page_label: "{workspace} - Intake",
     modal: {
-      title: "Create intake work item",
+      title: "Create intake ticket",
     },
     tabs: {
       open: "Open",
@@ -1094,19 +1094,19 @@ export default {
     },
     empty_state: {
       sidebar_open_tab: {
-        title: "No open work items",
-        description: "Find open work items here. Create new work item.",
+        title: "No open tickets",
+        description: "Find open tickets here. Create new ticket.",
       },
       sidebar_closed_tab: {
-        title: "No closed work items",
-        description: "All the work items whether accepted or declined can be found here.",
+        title: "No closed tickets",
+        description: "All the tickets whether accepted or declined can be found here.",
       },
       sidebar_filter: {
-        title: "No matching work items",
-        description: "No work item matches filter applied in intake. Create a new work item.",
+        title: "No matching tickets",
+        description: "No ticket matches filter applied in intake. Create a new ticket.",
       },
       detail: {
-        title: "Select a work item to view its details.",
+        title: "Select a ticket to view its details.",
       },
     },
   },
@@ -1167,7 +1167,7 @@ export default {
       general: {
         title: "Overview of your projects, activity, and metrics",
         description:
-          "Welcome to IMT, we are excited to have you here. Create your first project and track your work items, and this page will transform into a space that helps you progress. Admins will also see items which help their team progress.",
+          "Welcome to IMT, we are excited to have you here. Create your first project and track your tickets, and this page will transform into a space that helps you progress. Admins will also see items which help their team progress.",
         primary_button: {
           text: "Build your first project",
           comic: {
@@ -1183,26 +1183,26 @@ export default {
     page_label: "{workspace} - Analytics",
     open_tasks: "Total open tasks",
     error: "There was some error in fetching the data.",
-    work_items_closed_in: "Work items closed in",
+    work_items_closed_in: "Tickets closed in",
     selected_projects: "Selected projects",
     total_members: "Total members",
-    total_cycles: "Total cycles",
+    total_cycles: "Total sprints",
     total_modules: "Total modules",
     pending_work_items: {
-      title: "Pending work items",
-      empty_state: "Analysis of pending work items by co-workers appears here.",
+      title: "Pending tickets",
+      empty_state: "Analysis of pending tickets by co-workers appears here.",
     },
     work_items_closed_in_a_year: {
-      title: "Work items closed in a year",
-      empty_state: "Close work items to view analysis of the same in the form of a graph.",
+      title: "Tickets closed in a year",
+      empty_state: "Close tickets to view analysis of the same in the form of a graph.",
     },
     most_work_items_created: {
-      title: "Most work items created",
-      empty_state: "Co-workers and the number of work items created by them appears here.",
+      title: "Most tickets created",
+      empty_state: "Co-workers and the number of tickets created by them appears here.",
     },
     most_work_items_closed: {
-      title: "Most work items closed",
-      empty_state: "Co-workers and the number of work items closed by them appears here.",
+      title: "Most tickets closed",
+      empty_state: "Co-workers and the number of tickets closed by them appears here.",
     },
     tabs: {
       scope_and_demand: "Scope and Demand",
@@ -1210,7 +1210,7 @@ export default {
     },
     total: "Total {entity}",
     started_work_items: "Started {entity}",
-    backlog_work_items: "Backlog {entity}",
+    backlog_work_items: "Validation {entity}",
     un_started_work_items: "Unstarted {entity}",
     completed_work_items: "Completed {entity}",
     project_insights: "Project Insights",
@@ -1223,15 +1223,15 @@ export default {
     empty_state: {
       project_insights: {
         title: "No data yet",
-        description: "Work items assigned to you, broken down by state, will show up here.",
+        description: "Tickets assigned to you, broken down by status, will show up here.",
       },
       created_vs_resolved: {
         title: "No data yet",
-        description: "Work items created and resolved over time will show up here.",
+        description: "Tickets created and resolved over time will show up here.",
       },
       customized_insights: {
         title: "No data yet",
-        description: "Work items assigned to you, broken down by state, will show up here.",
+        description: "Tickets assigned to you, broken down by status, will show up here.",
       },
       general: {
         title: "Track progress, workloads, and allocations. Spot trends, remove blockers, and move work faster",
@@ -1240,9 +1240,9 @@ export default {
         primary_button: {
           text: "Start your first project",
           comic: {
-            title: "Analytics works best with Cycles + Modules",
+            title: "Analytics works best with Sprints + Modules",
             description:
-              "First, timebox your work items into Cycles and, if you can, group work items that span more than a cycle into Modules. Check out both on the left nav.",
+              "First, timebox your tickets into Sprints and, if you can, group tickets that span more than a sprint into Modules. Check out both on the left nav.",
           },
         },
       },
@@ -1266,12 +1266,12 @@ export default {
     },
     error: {
       permission: "You don't have permission to perform this action.",
-      cycle_delete: "Failed to delete cycle",
+      cycle_delete: "Failed to delete sprint",
       module_delete: "Failed to delete module",
-      issue_delete: "Failed to delete work item",
+      issue_delete: "Failed to delete ticket",
     },
     state: {
-      backlog: "Backlog",
+      backlog: "Validation",
       unstarted: "Unstarted",
       started: "Started",
       completed: "Completed",
@@ -1294,7 +1294,7 @@ export default {
       general: {
         title: "No active projects",
         description:
-          "Think of each project as the parent for goal-oriented work. Projects are where Jobs, Cycles, and Modules live and, along with your colleagues, help you achieve that goal. Create a new project or filter for archived projects.",
+          "Think of each project as the parent for goal-oriented work. Projects are where Jobs, Sprints, and Modules live and, along with your colleagues, help you achieve that goal. Create a new project or filter for archived projects.",
         primary_button: {
           text: "Start your first project",
           comic: {
@@ -1305,7 +1305,7 @@ export default {
       },
       no_projects: {
         title: "No project",
-        description: "To create work items or manage your work, you need to create a project or be a part of one.",
+        description: "To create tickets or manage your work, you need to create a project or be a part of one.",
         primary_button: {
           text: "Start your first project",
           comic: {
@@ -1327,33 +1327,33 @@ export default {
     add_view: "Add view",
     empty_state: {
       "all-issues": {
-        title: "No work items in the project",
-        description: "First project done! Now, slice your work into trackable pieces with work items. Let's go!",
+        title: "No tickets in the project",
+        description: "First project done! Now, slice your work into trackable pieces with tickets. Let's go!",
         primary_button: {
-          text: "Create new work item",
+          text: "Create new ticket",
         },
       },
       assigned: {
-        title: "No work items yet",
-        description: "Work items assigned to you can be tracked from here.",
+        title: "No tickets yet",
+        description: "Tickets assigned to you can be tracked from here.",
         primary_button: {
-          text: "Create new work item",
+          text: "Create new ticket",
         },
       },
       created: {
-        title: "No work items yet",
-        description: "All work items created by you come here, track them here directly.",
+        title: "No tickets yet",
+        description: "All tickets created by you come here, track them here directly.",
         primary_button: {
-          text: "Create new work item",
+          text: "Create new ticket",
         },
       },
       subscribed: {
-        title: "No work items yet",
-        description: "Subscribe to work items you are interested in, track all of them here.",
+        title: "No tickets yet",
+        description: "Subscribe to tickets you are interested in, track all of them here.",
       },
       "custom-view": {
-        title: "No work items yet",
-        description: "Work items that applies to the filters, track all of them here.",
+        title: "No tickets yet",
+        description: "Tickets that applies to the filters, track all of them here.",
       },
     },
     delete_view: {
@@ -1408,7 +1408,7 @@ export default {
     },
     notifications: {
       heading: "Email notifications",
-      description: "Stay in the loop on Work items you are subscribed to. Enable this to get notified.",
+      description: "Stay in the loop on Tickets you are subscribed to. Enable this to get notified.",
     },
     security: {
       heading: "Security",
@@ -1419,7 +1419,7 @@ export default {
     },
     activity: {
       heading: "Activity",
-      description: "Track your recent actions and changes across all projects and work items.",
+      description: "Track your recent actions and changes across all projects and tickets.",
     },
   },
   workspace_settings: {
@@ -1508,7 +1508,7 @@ export default {
         export_separate_files: "Export the data into separate files",
         exporting_projects: "Exporting project",
         format: "Format",
-        filters_info: "Apply filters to export specific work items based on your criteria.",
+        filters_info: "Apply filters to export specific tickets based on your criteria.",
         modal: {
           title: "Export to",
           toasts: {
@@ -1629,16 +1629,16 @@ export default {
     stats: {
       workload: "Workload",
       overview: "Overview",
-      created: "Work items created",
-      assigned: "Work items assigned",
-      subscribed: "Work items subscribed",
+      created: "Tickets created",
+      assigned: "Tickets assigned",
+      subscribed: "Tickets subscribed",
       state_distribution: {
-        title: "Work items by state",
-        empty: "Create work items to view the them by states in the graph for better analysis.",
+        title: "Tickets by status",
+        empty: "Create tickets to view them by status in the graph for better analysis.",
       },
       priority_distribution: {
-        title: "Work items by Priority",
-        empty: "Create work items to view the them by priority in the graph for better analysis.",
+        title: "Tickets by Priority",
+        empty: "Create tickets to view the them by priority in the graph for better analysis.",
       },
       recent_activity: {
         title: "Recent activity",
@@ -1666,19 +1666,19 @@ export default {
       activity: {
         title: "No activities yet",
         description:
-          "Get started by creating a new work item! Add details and properties to it. Explore more in IMT to see your activity.",
+          "Get started by creating a new ticket! Add details and properties to it. Explore more in IMT to see your activity.",
       },
       assigned: {
-        title: "No work items are assigned to you",
-        description: "Work items assigned to you can be tracked from here.",
+        title: "No tickets are assigned to you",
+        description: "Tickets assigned to you can be tracked from here.",
       },
       created: {
-        title: "No work items yet",
-        description: "All work items created by you come here, track them here directly.",
+        title: "No tickets yet",
+        description: "All tickets created by you come here, track them here directly.",
       },
       subscribed: {
-        title: "No work items yet",
-        description: "Subscribe to work items you are interested in, track all of them here.",
+        title: "No tickets yet",
+        description: "Subscribe to tickets you are interested in, track all of them here.",
       },
     },
   },
@@ -1708,8 +1708,8 @@ export default {
       project_lead: "Project lead",
       default_assignee: "Default assignee",
       guest_super_permissions: {
-        title: "Grant view access to all work items for guest users:",
-        sub_heading: "This will allow guests to have view access to all the project work items.",
+        title: "Grant view access to all tickets for guest users:",
+        sub_heading: "This will allow guests to have view access to all the project tickets.",
       },
       invite_members: {
         title: "Invite members",
@@ -1718,17 +1718,17 @@ export default {
       },
     },
     states: {
-      heading: "States",
-      description: "Define and customize workflow states to track the progress of your work items.",
-      describe_this_state_for_your_members: "Describe this state for your members.",
+      heading: "Status",
+      description: "Define and customize workflow statuses to track the progress of your tickets.",
+      describe_this_state_for_your_members: "Describe this status for your members.",
       empty_state: {
-        title: "No states available for the {groupKey} group",
-        description: "Please create a new state",
+        title: "No statuses available for the {groupKey} group",
+        description: "Please create a new status",
       },
     },
     labels: {
       heading: "Labels",
-      description: "Create custom labels to categorize and organize your work items",
+      description: "Create custom labels to categorize and organize your tickets",
       label_title: "Label title",
       label_title_is_required: "Label title is required",
       label_max_char: "Label name should not exceed 255 characters",
@@ -1738,7 +1738,7 @@ export default {
     },
     estimates: {
       heading: "Estimates",
-      description: "Set up estimation systems to track and communicate the effort required for each work item.",
+      description: "Set up estimation systems to track and communicate the effort required for each ticket.",
       label: "Estimates",
       title: "Enable estimates for my project",
       enable_description: "They help you in communicating complexity and workload of the team.",
@@ -1827,34 +1827,34 @@ export default {
       description:
         "Configure automated actions to streamline your project management workflow and reduce manual tasks.",
       "auto-archive": {
-        title: "Auto-archive closed work items",
-        description: "IMT will auto archive work items that have been completed or canceled.",
-        duration: "Auto-archive work items that are closed for",
+        title: "Auto-archive closed tickets",
+        description: "IMT will auto archive tickets that have been completed or canceled.",
+        duration: "Auto-archive tickets that are closed for",
       },
       "auto-close": {
-        title: "Auto-close work items",
-        description: "IMT will automatically close work items that haven't been completed or canceled.",
-        duration: "Auto-close work items that are inactive for",
+        title: "Auto-close tickets",
+        description: "IMT will automatically close tickets that haven't been completed or canceled.",
+        duration: "Auto-close tickets that are inactive for",
         auto_close_status: "Auto-close status",
       },
     },
     empty_state: {
       labels: {
         title: "No labels yet",
-        description: "Create labels to help organize and filter work items in you project.",
+        description: "Create labels to help organize and filter tickets in you project.",
       },
       estimates: {
         title: "No estimate systems yet",
-        description: "Create a set of estimates to communicate the amount of work per work item.",
+        description: "Create a set of estimates to communicate the amount of work per ticket.",
         primary_button: "Add estimate system",
       },
     },
     features: {
       cycles: {
-        title: "Cycles",
-        short_title: "Cycles",
+        title: "Sprints",
+        short_title: "Sprints",
         description: "Schedule work in flexible periods that adapt to this project's unique rhythm and pace.",
-        toggle_title: "Enable cycles",
+        toggle_title: "Enable sprints",
         toggle_description: "Plan work in focused timeframes.",
       },
       modules: {
@@ -1888,37 +1888,37 @@ export default {
     },
   },
   project_cycles: {
-    add_cycle: "Add cycle",
+    add_cycle: "Add sprint",
     more_details: "More details",
-    cycle: "Cycle",
-    update_cycle: "Update cycle",
-    create_cycle: "Create cycle",
-    no_matching_cycles: "No matching cycles",
-    remove_filters_to_see_all_cycles: "Remove the filters to see all cycles",
-    remove_search_criteria_to_see_all_cycles: "Remove the search criteria to see all cycles",
-    only_completed_cycles_can_be_archived: "Only completed cycles can be archived",
+    cycle: "Sprint",
+    update_cycle: "Update sprint",
+    create_cycle: "Create sprint",
+    no_matching_cycles: "No matching sprints",
+    remove_filters_to_see_all_cycles: "Remove the filters to see all sprints",
+    remove_search_criteria_to_see_all_cycles: "Remove the search criteria to see all sprints",
+    only_completed_cycles_can_be_archived: "Only completed sprints can be archived",
     start_date: "Start date",
     end_date: "End date",
     in_your_timezone: "In your timezone",
-    transfer_work_items: "Transfer {count} work items",
+    transfer_work_items: "Transfer {count} tickets",
     date_range: "Date range",
     add_date: "Add date",
     active_cycle: {
-      label: "Active cycle",
+      label: "Active sprint",
       progress: "Progress",
       chart: "Burndown chart",
-      priority_issue: "Priority work items",
+      priority_issue: "Priority tickets",
       assignees: "Assignees",
-      issue_burndown: "Work item burndown",
+      issue_burndown: "Ticket burndown",
       ideal: "Ideal",
       current: "Current",
       labels: "Labels",
     },
     upcoming_cycle: {
-      label: "Upcoming cycle",
+      label: "Upcoming sprint",
     },
     completed_cycle: {
-      label: "Completed cycle",
+      label: "Completed sprint",
     },
     status: {
       days_left: "Days left",
@@ -1929,119 +1929,119 @@ export default {
     },
     action: {
       restore: {
-        title: "Restore cycle",
+        title: "Restore sprint",
         success: {
-          title: "Cycle restored",
-          description: "The cycle has been restored.",
+          title: "Sprint restored",
+          description: "The sprint has been restored.",
         },
         failed: {
-          title: "Cycle restore failed",
-          description: "The cycle could not be restored. Please try again.",
+          title: "Sprint restore failed",
+          description: "The sprint could not be restored. Please try again.",
         },
       },
       favorite: {
-        loading: "Adding cycle to favorites",
+        loading: "Adding sprint to favorites",
         success: {
-          description: "Cycle added to favorites.",
+          description: "Sprint added to favorites.",
           title: "Success!",
         },
         failed: {
-          description: "Couldn't add the cycle to favorites. Please try again.",
+          description: "Couldn't add the sprint to favorites. Please try again.",
           title: "Error!",
         },
       },
       unfavorite: {
-        loading: "Removing cycle from favorites",
+        loading: "Removing sprint from favorites",
         success: {
-          description: "Cycle removed from favorites.",
+          description: "Sprint removed from favorites.",
           title: "Success!",
         },
         failed: {
-          description: "Couldn't remove the cycle from favorites. Please try again.",
+          description: "Couldn't remove the sprint from favorites. Please try again.",
           title: "Error!",
         },
       },
       update: {
-        loading: "Updating cycle",
+        loading: "Updating sprint",
         success: {
-          description: "Cycle updated successfully.",
+          description: "Sprint updated successfully.",
           title: "Success!",
         },
         failed: {
-          description: "Error updating the cycle. Please try again.",
+          description: "Error updating the sprint. Please try again.",
           title: "Error!",
         },
         error: {
           already_exists:
-            "You already have a cycle on the given dates, if you want to create a draft cycle, you can do that by removing both the dates.",
+            "You already have a sprint on the given dates. If you want to create a draft sprint, remove both dates.",
         },
       },
     },
     empty_state: {
       general: {
-        title: "Group and timebox your work in Cycles.",
+        title: "Group and timebox your work in Sprints.",
         description:
           "Break work down by timeboxed chunks, work backwards from your project deadline to set dates, and make tangible progress as a team.",
         primary_button: {
-          text: "Set your first cycle",
+          text: "Set your first sprint",
           comic: {
-            title: "Cycles are repetitive time-boxes.",
+            title: "Sprints are repetitive time-boxes.",
             description:
-              "A sprint, an iteration, and or any other term you use for weekly or fortnightly tracking of work is a cycle.",
+              "A sprint, iteration, or any term you use for weekly or fortnightly tracking can be configured here.",
           },
         },
       },
       no_issues: {
-        title: "No work items added to the cycle",
-        description: "Add or create work items you wish to timebox and deliver within this cycle",
+        title: "No tickets added to the sprint",
+        description: "Add or create tickets you want to timebox and deliver within this sprint.",
         primary_button: {
-          text: "Create new work item",
+          text: "Create new ticket",
         },
         secondary_button: {
-          text: "Add existing work item",
+          text: "Add existing ticket",
         },
       },
       completed_no_issues: {
-        title: "No work items in the cycle",
+        title: "No tickets in the sprint",
         description:
-          "No work items in the cycle. Work items are either transferred or hidden. To see hidden work items if any, update your display properties accordingly.",
+          "No tickets in the sprint. Tickets are either transferred or hidden. To see hidden tickets, update your display properties.",
       },
       active: {
-        title: "No active cycle",
+        title: "No active sprint",
         description:
-          "An active cycle includes any period that encompasses today's date within its range. Find the progress and details of the active cycle here.",
+          "An active sprint includes any period that encompasses today's date within its range. Find the progress and details of the active sprint here.",
       },
       archived: {
-        title: "No archived cycles yet",
-        description: "To tidy up your project, archive completed cycles. Find them here once archived.",
+        title: "No archived sprints yet",
+        description: "To tidy up your project, archive completed sprints. Find them here once archived.",
       },
     },
   },
   project_issues: {
     empty_state: {
       no_issues: {
-        title: "Create a work item and assign it to someone, even yourself",
+        title: "Create a ticket and assign it to someone, even yourself",
         description:
-          "Think of work items as jobs, tasks, work, or JTBD. Which we like. A work item and its sub-work items are usually time-based actionables assigned to members of your team. Your team creates, assigns, and completes work items to move your project towards its goal.",
+          "Think of tickets as jobs, tasks, work, or JTBD. Which we like. A ticket and its sub-tickets are usually time-based actionables assigned to members of your team. Your team creates, assigns, and completes tickets to move your project towards its goal.",
         primary_button: {
-          text: "Create your first work item",
+          text: "Create your first ticket",
           comic: {
-            title: "Work items are building blocks in IMT.",
+            title: "Tickets are building blocks in IMT.",
             description:
-              "Redesign the IMT UI, Rebrand the company, or Launch the new fuel injection system are examples of work items that likely have sub-work items.",
+              "Redesign the IMT UI, Rebrand the company, or Launch the new fuel injection system are examples of tickets that likely have sub-tickets.",
           },
         },
       },
       no_archived_issues: {
-        title: "No archived work items yet",
+        title: "No archived tickets yet",
         description:
-          "Manually or through automation, you can archive work items that are completed or cancelled. Find them here once archived.",
+          "Manually or through automation, you can archive tickets that are completed or cancelled. Find them here once archived.",
         primary_button: {
           text: "Set automation",
         },
       },
       issues_empty_filter: {
-        title: "No work items found matching the filters applied",
+        title: "No tickets found matching the filters applied",
         secondary_button: {
           text: "Clear all filters",
         },
@@ -2059,7 +2059,7 @@ export default {
       general: {
         title: "Map your project milestones to Modules and track aggregated work easily.",
         description:
-          "A group of work items that belong to a logical, hierarchical parent form a module. Think of them as a way to track work by project milestones. They have their own periods and deadlines as well as analytics to help you see how close or far you are from a milestone.",
+          "A group of tickets that belong to a logical, hierarchical parent form a module. Think of them as a way to track work by project milestones. They have their own periods and deadlines as well as analytics to help you see how close or far you are from a milestone.",
         primary_button: {
           text: "Build your first module",
           comic: {
@@ -2070,13 +2070,13 @@ export default {
         },
       },
       no_issues: {
-        title: "No work items in the module",
-        description: "Create or add work items which you want to accomplish as part of this module",
+        title: "No tickets in the module",
+        description: "Create or add tickets which you want to accomplish as part of this module",
         primary_button: {
-          text: "Create new work items",
+          text: "Create new tickets",
         },
         secondary_button: {
-          text: "Add an existing work item",
+          text: "Add an existing ticket",
         },
       },
       archived: {
@@ -2112,7 +2112,7 @@ export default {
         primary_button: {
           text: "Create your first view",
           comic: {
-            title: "Views work atop Work item properties.",
+            title: "Views work atop Ticket properties.",
             description: "You can create a view from here with as many properties as filters as you see fit.",
           },
         },
@@ -2134,7 +2134,7 @@ export default {
         title:
           "Write a note, a doc, or a full knowledge base. Get Galileo, IMT's AI assistant, to help you get started",
         description:
-          "Pages are thoughts potting space in IMT. Take down meeting notes, format them easily, embed work items, lay them out using a library of components, and keep them all in your project's context. To make short work of any doc, invoke Galileo, IMT's AI, with a shortcut or the click of a button.",
+          "Pages are thoughts potting space in IMT. Take down meeting notes, format them easily, embed tickets, lay them out using a library of components, and keep them all in your project's context. To make short work of any doc, invoke Galileo, IMT's AI, with a shortcut or the click of a button.",
         primary_button: {
           text: "Create your first page",
         },
@@ -2169,10 +2169,10 @@ export default {
   issue_relation: {
     empty_state: {
       search: {
-        title: "No matching work items found",
+        title: "No matching tickets found",
       },
       no_issues: {
-        title: "No work items found",
+        title: "No tickets found",
       },
     },
   },
@@ -2180,7 +2180,7 @@ export default {
     empty_state: {
       general: {
         title: "No comments yet",
-        description: "Comments can be used as a discussion and follow-up space for the work items",
+        description: "Comments can be used as a discussion and follow-up space for the tickets",
       },
     },
   },
@@ -2214,12 +2214,12 @@ export default {
         title: "Select to view details.",
       },
       all: {
-        title: "No work items assigned",
-        description: "Updates for work items assigned to you can be \n seen here",
+        title: "No tickets assigned",
+        description: "Updates for tickets assigned to you can be \n seen here",
       },
       mentions: {
-        title: "No work items assigned",
-        description: "Updates for work items assigned to you can be \n seen here",
+        title: "No tickets assigned",
+        description: "Updates for tickets assigned to you can be \n seen here",
       },
     },
     tabs: {
@@ -2243,19 +2243,19 @@ export default {
   active_cycle: {
     empty_state: {
       progress: {
-        title: "Add work items to the cycle to view it's progress",
+        title: "Add tickets to the sprint to view it's progress",
       },
       chart: {
-        title: "Add work items to the cycle to view the burndown chart.",
+        title: "Add tickets to the sprint to view the burndown chart.",
       },
       priority_issue: {
-        title: "Observe high priority work items tackled in the cycle at a glance.",
+        title: "Observe high priority tickets tackled in the sprint at a glance.",
       },
       assignee: {
-        title: "Add assignees to work items to see a breakdown of work by assignees.",
+        title: "Add assignees to tickets to see a breakdown of work by assignees.",
       },
       label: {
-        title: "Add labels to work items to see the breakdown of work by labels.",
+        title: "Add labels to tickets to see the breakdown of work by labels.",
       },
     },
   },
@@ -2264,15 +2264,15 @@ export default {
       inbox: {
         title: "Intake is not enabled for the project.",
         description:
-          "Intake helps you manage incoming requests to your project and add them as work items in your workflow. Enable intake from project settings to manage requests.",
+          "Intake helps you manage incoming requests to your project and add them as tickets in your workflow. Enable intake from project settings to manage requests.",
         primary_button: {
           text: "Manage features",
         },
       },
       cycle: {
-        title: "Cycles is not enabled for this project.",
+        title: "Sprints are not enabled for this project.",
         description:
-          "Break work down by timeboxed chunks, work backwards from your project deadline to set dates, and make tangible progress as a team. Enable the cycles feature for your project to start using them.",
+          "Break work down by timeboxed chunks, work backwards from your project deadline to set dates, and make tangible progress as a team. Enable the sprints feature for your project to start using them.",
         primary_button: {
           text: "Manage features",
         },
@@ -2304,11 +2304,11 @@ export default {
     },
   },
   workspace_draft_issues: {
-    draft_an_issue: "Draft a work item",
+    draft_an_issue: "Draft a ticket",
     empty_state: {
-      title: "Half-written work items, and soon, comments will show up here.",
+      title: "Half-written tickets, and soon, comments will show up here.",
       description:
-        "To try this out, start adding a work item and leave it mid-way or create your first draft below. 😉",
+        "To try this out, start adding a ticket and leave it mid-way or create your first draft below. 😉",
       primary_button: {
         text: "Create your first draft",
       },
@@ -2320,7 +2320,7 @@ export default {
     toasts: {
       created: {
         success: "Draft created",
-        error: "Work item could not be created. Please try again.",
+        error: "Ticket could not be created. Please try again.",
       },
       deleted: {
         success: "Draft deleted",
@@ -2392,7 +2392,7 @@ export default {
     },
     member: {
       title: "Member",
-      description: "Ability to read, write, edit, and delete entities inside projects, cycles, and modules",
+      description: "Ability to read, write, edit, and delete entities inside projects, sprints, and modules",
     },
     admin: {
       title: "Admin",
@@ -2414,37 +2414,37 @@ export default {
   importer: {
     github: {
       title: "Github",
-      description: "Import work items from GitHub repositories and sync them.",
+      description: "Import tickets from GitHub repositories and sync them.",
     },
     jira: {
       title: "Jira",
-      description: "Import work items and epics from Jira projects and epics.",
+      description: "Import tickets and epics from Jira projects and epics.",
     },
   },
   exporter: {
     csv: {
       title: "CSV",
-      description: "Export work items to a CSV file.",
+      description: "Export tickets to a CSV file.",
       short_description: "Export as csv",
     },
     excel: {
       title: "Excel",
-      description: "Export work items to a Excel file.",
+      description: "Export tickets to a Excel file.",
       short_description: "Export as excel",
     },
     xlsx: {
       title: "Excel",
-      description: "Export work items to a Excel file.",
+      description: "Export tickets to a Excel file.",
       short_description: "Export as excel",
     },
     json: {
       title: "JSON",
-      description: "Export work items to a JSON file.",
+      description: "Export tickets to a JSON file.",
       short_description: "Export as json",
     },
   },
   default_global_view: {
-    all_issues: "All work items",
+    all_issues: "All tickets",
     assigned: "Assigned",
     created: "Created",
     subscribed: "Subscribed",
@@ -2488,15 +2488,15 @@ export default {
     order_by: {
       name: "Name",
       progress: "Progress",
-      issues: "Number of work items",
+      issues: "Number of tickets",
       due_date: "Due date",
       created_at: "Created date",
       manual: "Manual",
     },
   },
   cycle: {
-    label: "{count, plural, one {Cycle} other {Cycles}}",
-    no_cycle: "No cycle",
+    label: "{count, plural, one {Sprint} other {Sprints}}",
+    no_cycle: "No sprint",
   },
   module: {
     label: "{count, plural, one {Module} other {Modules}}",
@@ -2562,38 +2562,38 @@ export default {
   power_k: {
     contextual_actions: {
       work_item: {
-        title: "Work item actions",
-        indicator: "Work item",
-        change_state: "Change state",
+        title: "Ticket actions",
+        indicator: "Ticket",
+        change_state: "Change status",
         change_priority: "Change priority",
         change_assignees: "Assign to",
         assign_to_me: "Assign to me",
         unassign_from_me: "Un-assign from me",
         change_estimate: "Change estimate",
-        add_to_cycle: "Add to cycle",
+        add_to_cycle: "Add to sprint",
         add_to_modules: "Add to modules",
         add_labels: "Add labels",
         subscribe: "Subscribe to notifications",
         unsubscribe: "Unsubscribe from notifications",
         delete: "Delete",
         copy_id: "Copy ID",
-        copy_id_toast_success: "Work item ID copied to clipboard.",
-        copy_id_toast_error: "Some error occurred while copying the work item ID to clipboard.",
+        copy_id_toast_success: "Ticket ID copied to clipboard.",
+        copy_id_toast_error: "Some error occurred while copying the ticket ID to clipboard.",
         copy_title: "Copy title",
-        copy_title_toast_success: "Work item title copied to clipboard.",
-        copy_title_toast_error: "Some error occurred while copying the work item title to clipboard.",
+        copy_title_toast_success: "Ticket title copied to clipboard.",
+        copy_title_toast_error: "Some error occurred while copying the ticket title to clipboard.",
         copy_url: "Copy URL",
-        copy_url_toast_success: "Work item URL copied to clipboard.",
-        copy_url_toast_error: "Some error occurred while copying the work item URL to clipboard.",
+        copy_url_toast_success: "Ticket URL copied to clipboard.",
+        copy_url_toast_error: "Some error occurred while copying the ticket URL to clipboard.",
       },
       cycle: {
-        title: "Cycle actions",
-        indicator: "Cycle",
+        title: "Sprint actions",
+        indicator: "Sprint",
         add_to_favorites: "Add to favorites",
         remove_from_favorites: "Remove from favorites",
         copy_url: "Copy URL",
-        copy_url_toast_success: "Cycle URL copied to clipboard.",
-        copy_url_toast_error: "Some error occurred while copying the cycle URL to clipboard.",
+        copy_url_toast_success: "Sprint URL copied to clipboard.",
+        copy_url_toast_error: "Some error occurred while copying the sprint URL to clipboard.",
       },
       module: {
         title: "Module actions",
@@ -2623,10 +2623,10 @@ export default {
       },
     },
     creation_actions: {
-      create_work_item: "New work item",
+      create_work_item: "New ticket",
       create_page: "New page",
       create_view: "New view",
-      create_cycle: "New cycle",
+      create_cycle: "New sprint",
       create_module: "New module",
       create_project: "New project",
       create_workspace: "New workspace",
@@ -2639,18 +2639,18 @@ export default {
       nav_account_settings: "Go to account settings",
       open_project: "Open a project",
       nav_projects_list: "Go to projects list",
-      nav_all_workspace_work_items: "Go to all work items",
-      nav_assigned_workspace_work_items: "Go to assigned work items",
-      nav_created_workspace_work_items: "Go to created work items",
-      nav_subscribed_workspace_work_items: "Go to subscribed work items",
+      nav_all_workspace_work_items: "Go to all tickets",
+      nav_assigned_workspace_work_items: "Go to assigned tickets",
+      nav_created_workspace_work_items: "Go to created tickets",
+      nav_subscribed_workspace_work_items: "Go to subscribed tickets",
       nav_workspace_analytics: "Go to workspace analytics",
       nav_workspace_drafts: "Go to workspace drafts",
       nav_workspace_archives: "Go to workspace archives",
       open_workspace_setting: "Open a workspace setting",
       nav_workspace_settings: "Go to workspace settings",
-      nav_project_work_items: "Go to work items",
-      open_project_cycle: "Open a cycle",
-      nav_project_cycles: "Go to cycles",
+      nav_project_work_items: "Go to tickets",
+      open_project_cycle: "Open a sprint",
+      nav_project_cycles: "Go to sprints",
       open_project_module: "Open a module",
       nav_project_modules: "Go to modules",
       open_project_view: "Open a project view",
@@ -2704,15 +2704,15 @@ export default {
       open_workspace: "Open a workspace",
       open_project: "Open a project",
       open_workspace_setting: "Open a workspace setting",
-      open_project_cycle: "Open a cycle",
+      open_project_cycle: "Open a sprint",
       open_project_module: "Open a module",
       open_project_view: "Open a project view",
       open_project_setting: "Open a project setting",
-      update_work_item_state: "Change state",
+      update_work_item_state: "Change status",
       update_work_item_priority: "Change priority",
       update_work_item_assignee: "Assign to",
       update_work_item_estimate: "Change estimate",
-      update_work_item_cycle: "Add to cycle",
+      update_work_item_cycle: "Add to sprint",
       update_work_item_module: "Add to modules",
       update_work_item_labels: "Add labels",
       update_module_member: "Change members",

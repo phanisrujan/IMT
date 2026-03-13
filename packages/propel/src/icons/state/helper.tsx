@@ -28,11 +28,11 @@ export type TStateGroups = "backlog" | "unstarted" | "started" | "completed" | "
 export const STATE_GROUP_COLORS: {
   [key in TStateGroups]: string;
 } = {
-  backlog: "#60646C",
+  backlog: "#0693E3",
   unstarted: "#60646C",
   started: "#F59E0B",
   completed: "#46A758",
-  cancelled: "#9AA4BC",
+  cancelled: "#EF4444",
 };
 
 export const INTAKE_STATE_GROUP_COLORS: { [key in TIntakeStateGroups]: string } = { triage: "#4E5355" };

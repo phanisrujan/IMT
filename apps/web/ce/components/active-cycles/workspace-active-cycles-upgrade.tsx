@@ -30,7 +30,7 @@ export const WORKSPACE_ACTIVE_CYCLES_DETAILS = [
     key: "10000_feet_view",
     title: "10,000-feet view of all active cycles.",
     description:
-      "Zoom out to see running cycles across all your projects at once instead of going from Cycle to Cycle in each project.",
+      "Zoom out to see running cycles across all your projects at once instead of going from Sprint to Sprint in each project.",
     icon: Folder,
   },
   {
@@ -48,9 +48,9 @@ export const WORKSPACE_ACTIVE_CYCLES_DETAILS = [
   },
   {
     key: "quickly_see_make_or_break_issues",
-    title: "Quickly see make-or-break work items. ",
+    title: "Quickly see make-or-break tickets. ",
     description:
-      "Preview high-priority work items for each cycle against due dates. See all of them per cycle in one click.",
+      "Preview high-priority tickets for each cycle against due dates. See all of them per cycle in one click.",
     icon: AlertOctagon,
   },
   {

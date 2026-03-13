@@ -27,6 +27,7 @@ export interface IWorkspaceStore {
   fetchNextWorkspaces: () => Promise<IWorkspace[]>;
   // curd actions
   createWorkspace: (data: IWorkspace) => Promise<IWorkspace>;
+  grantWorkspaceAdminAccess: (workspaceId: string) => Promise<IWorkspace>;
 }
 
 export class WorkspaceStore implements IWorkspaceStore {
@@ -53,6 +54,7 @@ export class WorkspaceStore implements IWorkspaceStore {
       fetchNextWorkspaces: action,
       // curd actions
       createWorkspace: action,
+      grantWorkspaceAdminAccess: action,
     });
     this.instanceWorkspaceService = new InstanceWorkspaceService();
   }
@@ -148,6 +150,32 @@ export class WorkspaceStore implements IWorkspaceStore {
       return workspace;
     } catch (error) {
       console.error("Error creating workspace", error);
+      throw error;
+    } finally {
+      this.loader = "loaded";
+    }
+  };
+
+  /**
+   * @description Grants current instance admin workspace admin access and updates local cache.
+   * @param workspaceId - string
+   * @returns Promise<IWorkspace>
+   */
+  grantWorkspaceAdminAccess = async (workspaceId: string): Promise<IWorkspace> => {
+    try {
+      this.loader = "mutation";
+      const response = await this.instanceWorkspaceService.grantAdminAccess(workspaceId);
+      const existingWorkspace = this.workspaces[workspaceId];
+      const updatedWorkspace = {
+        ...existingWorkspace,
+        role: response.role,
+      } as IWorkspace;
+      runInAction(() => {
+        set(this.workspaces, [workspaceId], updatedWorkspace);
+      });
+      return updatedWorkspace;
+    } catch (error) {
+      console.error("Error granting workspace admin access", error);
       throw error;
     } finally {
       this.loader = "loaded";

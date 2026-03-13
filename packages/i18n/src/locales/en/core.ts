@@ -8,15 +8,15 @@ export default {
   sidebar: {
     projects: "Projects",
     pages: "Pages",
-    new_work_item: "New work item",
+    new_work_item: "New ticket",
     home: "Home",
     your_work: "Your work",
     inbox: "Inbox",
     workspace: "Workspace",
     views: "Views",
     analytics: "Analytics",
-    work_items: "Work items",
-    cycles: "Cycles",
+    work_items: "Tickets",
+    cycles: "Sprints",
     modules: "Modules",
     intake: "Intake",
     drafts: "Drafts",
@@ -145,7 +145,7 @@ export default {
       email_sent: "We sent the reset link to your email address",
       send_reset_link: "Send reset link",
       errors: {
-        smtp_not_enabled: "We see that your god hasn't enabled SMTP, we will not be able to send a password reset link",
+        smtp_not_enabled: "We see that your instance admin hasn't enabled SMTP, we will not be able to send a password reset link",
       },
       toast: {
         success: {

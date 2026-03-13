@@ -6,6 +6,7 @@
 
 import { useState } from "react";
 import { observer } from "mobx-react";
+import packageJson from "package.json";
 // plane imports
 import { DEFAULT_PRODUCT_BILLING_FREQUENCY, SUBSCRIPTION_WITH_BILLING_FREQUENCY } from "@plane/constants";
 import { useTranslation } from "@plane/i18n";
@@ -52,8 +53,8 @@ export const BillingRoot = observer(function BillingRoot() {
         />
         <div className="mt-6">
           <SettingsBoxedControlItem
-            title="Community"
-            description="Unlimited projects, issues, cycles, modules, pages, and storage"
+            title={`Version: v${packageJson.version}`}
+            description="Installed build version for this IMT deployment."
           />
         </div>
       </div>

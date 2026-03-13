@@ -305,7 +305,7 @@ export default {
     "Individua le sfide tra i progetti e visualizza le dipendenze inter-cicliche non evidenti in altre viste.",
   analytics: "Analisi",
   workspace_invites: "Inviti allo spazio di lavoro",
-  enter_god_mode: "Entra in modalità dio",
+  enter_god_mode: "Enter instance admin",
   workspace_logo: "Logo dello spazio di lavoro",
   new_issue: "Nuovo elemento di lavoro",
   your_work: "Il tuo lavoro",

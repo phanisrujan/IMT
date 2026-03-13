@@ -50,7 +50,7 @@ export const ProjectStateRoot = observer(function ProjectStateRoot(props: TProje
     { revalidateIfStale: false, revalidateOnFocus: false }
   );
 
-  // State operations callbacks
+  // Status operations callbacks
   const stateOperationsCallbacks: TStateOperationsCallbacks = useMemo(
     () => ({
       createState: async (data: Partial<IState>) => createState(workspaceSlug, projectId, data),

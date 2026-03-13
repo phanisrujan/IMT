@@ -19,12 +19,6 @@ export const STATE_GROUPS: {
     color: string;
   };
 } = {
-  backlog: {
-    key: "backlog",
-    label: "Backlog",
-    defaultStateName: "Backlog",
-    color: "#d9d9d9",
-  },
   unstarted: {
     key: "unstarted",
     label: "Unstarted",
@@ -37,6 +31,12 @@ export const STATE_GROUPS: {
     defaultStateName: "In Progress",
     color: "#f59e0b",
   },
+  backlog: {
+    key: "backlog",
+    label: "Validation",
+    defaultStateName: "In Review",
+    color: "#0693E3",
+  },
   completed: {
     key: "completed",
     label: "Completed",
@@ -45,27 +45,22 @@ export const STATE_GROUPS: {
   },
   cancelled: {
     key: "cancelled",
-    label: "Canceled",
+    label: "Cancelled",
     defaultStateName: "Cancelled",
-    color: "#dc2626",
+    color: "#EF4444",
   },
 };
 
 export const ARCHIVABLE_STATE_GROUPS = [STATE_GROUPS.completed.key, STATE_GROUPS.cancelled.key];
 export const COMPLETED_STATE_GROUPS = [STATE_GROUPS.completed.key];
 export const PENDING_STATE_GROUPS = [
-  STATE_GROUPS.backlog.key,
   STATE_GROUPS.unstarted.key,
   STATE_GROUPS.started.key,
+  STATE_GROUPS.backlog.key,
   STATE_GROUPS.cancelled.key,
 ];
 
 export const STATE_DISTRIBUTION = {
-  [STATE_GROUPS.backlog.key]: {
-    key: STATE_GROUPS.backlog.key,
-    issues: "backlog_issues",
-    points: "backlog_estimate_points",
-  },
   [STATE_GROUPS.unstarted.key]: {
     key: STATE_GROUPS.unstarted.key,
     issues: "unstarted_issues",
@@ -75,6 +70,11 @@ export const STATE_DISTRIBUTION = {
     key: STATE_GROUPS.started.key,
     issues: "started_issues",
     points: "started_estimate_points",
+  },
+  [STATE_GROUPS.backlog.key]: {
+    key: STATE_GROUPS.backlog.key,
+    issues: "backlog_issues",
+    points: "backlog_estimate_points",
   },
   [STATE_GROUPS.completed.key]: {
     key: STATE_GROUPS.completed.key,
@@ -106,8 +106,8 @@ export const PROGRESS_STATE_GROUPS_DETAILS = [
   },
   {
     key: "backlog_issues",
-    title: "Backlog",
-    color: "#A3A3A3",
+    title: "Validation",
+    color: "#0693E3",
   },
 ];
 

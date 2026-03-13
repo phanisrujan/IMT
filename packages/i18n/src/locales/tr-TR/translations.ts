@@ -304,7 +304,7 @@ export default {
     "Projeler arası zorlukları ve diğer görünümlerde belirgin olmayan döngü bağımlılıklarını tespit edin.",
   analytics: "Analitik",
   workspace_invites: "Çalışma Alanı Davetleri",
-  enter_god_mode: "Yönetici Moduna Geç",
+  enter_god_mode: "Enter instance admin",
   workspace_logo: "Çalışma Alanı Logosu",
   new_issue: "Yeni İş Öğesi",
   your_work: "Sizin İşleriniz",

@@ -306,7 +306,7 @@ export default {
     "Repérez les défis d’un projet à l’autre et repérez les dépendances inter-cycles qui ne sont pas évidentes depuis une autre vue.",
   analytics: "Analyses",
   workspace_invites: "Invitations à l’espace de travail",
-  enter_god_mode: "Entrer en mode dieu",
+  enter_god_mode: "Enter instance admin",
   workspace_logo: "Logo de l’espace de travail",
   new_issue: "Nouvel élément de travail",
   your_work: "Votre travail",

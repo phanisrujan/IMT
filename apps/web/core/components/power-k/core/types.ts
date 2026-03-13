@@ -41,7 +41,7 @@ export type TPowerKPageType =
   | "open-project-module"
   | "open-project-view"
   | "open-project-setting"
-  // work item context based actions
+  // ticket context based actions
   | "update-work-item-state"
   | "update-work-item-priority"
   | "update-work-item-assignee"
@@ -114,7 +114,7 @@ export type TPowerKCommandConfig = {
   );
 
 // ============================================================================
-// UI State Types
+// UI Status Types
 // ============================================================================
 
 export type TCommandPaletteState = {

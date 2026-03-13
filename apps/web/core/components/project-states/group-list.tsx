@@ -34,9 +34,9 @@ export const GroupList = observer(function GroupList(props: TGroupList) {
   } = props;
   // states
   const [groupsExpanded, setGroupsExpanded] = useState<Partial<TStateGroups>[]>([
-    "backlog",
     "unstarted",
     "started",
+    "backlog",
     "completed",
     "cancelled",
   ]);

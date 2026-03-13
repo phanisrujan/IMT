@@ -135,7 +135,7 @@ export const InboxIssueProperties = observer(function InboxIssueProperties(props
             value={data?.cycle_id || ""}
             onChange={(cycleId) => handleData("cycle_id", cycleId)}
             projectId={projectId}
-            placeholder="Cycle"
+            placeholder="Sprint"
             buttonVariant="border-with-text"
             tabIndex={getIndex("cycle_id")}
           />
@@ -197,7 +197,7 @@ export const InboxIssueProperties = observer(function InboxIssueProperties(props
             >
               <>
                 <CustomMenu.MenuItem className="!p-1" onClick={() => setParentIssueModalOpen(true)}>
-                  Change parent work item
+                  Change parent ticket
                 </CustomMenu.MenuItem>
                 <CustomMenu.MenuItem
                   className="!p-1"
@@ -206,7 +206,7 @@ export const InboxIssueProperties = observer(function InboxIssueProperties(props
                     setSelectedParentIssue(undefined);
                   }}
                 >
-                  Remove parent work item
+                  Remove parent ticket
                 </CustomMenu.MenuItem>
               </>
             </CustomMenu>

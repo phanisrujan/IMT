@@ -32,7 +32,7 @@ const toolbarItems = TOOLBAR_ITEMS.sticky;
 export function StickyEditorToolbar(props: Props) {
   const { executeCommand, editorRef, handleColorChange, handleDelete } = props;
 
-  // State to manage active states of toolbar items
+  // Status to manage active states of toolbar items
   const [activeStates, setActiveStates] = useState<Record<string, boolean>>({});
   const [showColorPalette, setShowColorPalette] = useState(false);
   const colorPaletteRef = React.useRef<HTMLDivElement>(null);

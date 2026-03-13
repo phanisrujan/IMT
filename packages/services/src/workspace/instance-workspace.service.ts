@@ -68,4 +68,22 @@ export class InstanceWorkspaceService extends APIService {
         throw error?.response?.data;
       });
   }
+
+  /**
+   * Grants the current instance admin user workspace admin access for a workspace.
+   * @param {string} workspaceId - Workspace UUID
+   */
+  async grantAdminAccess(
+    workspaceId: string
+  ): Promise<{
+    workspace_id: string;
+    workspace_slug: string;
+    role: number;
+  }> {
+    return this.post(`/api/instances/workspaces/${workspaceId}/grant-admin-access/`, {})
+      .then((response) => response?.data)
+      .catch((error) => {
+        throw error?.response?.data;
+      });
+  }
 }

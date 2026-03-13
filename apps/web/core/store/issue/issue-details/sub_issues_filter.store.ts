@@ -99,7 +99,7 @@ export class WorkItemSubIssueFiltersStore implements IWorkItemSubIssueFiltersSto
   };
 
   /**
-   * @description This method is used to get the grouped sub work items
+   * @description This method is used to get the grouped sub tickets
    * @param parentWorkItemId
    * @returns
    */
@@ -118,7 +118,7 @@ export class WorkItemSubIssueFiltersStore implements IWorkItemSubIssueFiltersSto
   });
 
   /**
-   * @description This method is used to get the filtered sub work items
+   * @description This method is used to get the filtered sub tickets
    * @param workItemId
    * @returns
    */

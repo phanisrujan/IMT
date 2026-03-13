@@ -12,7 +12,7 @@ from .project import ProjectBaseModel
 from plane.db.mixins import SoftDeletionManager
 
 class StateGroup(models.TextChoices):
-    BACKLOG = "backlog", "Backlog"
+    BACKLOG = "backlog", "Validation"
     UNSTARTED = "unstarted", "Unstarted"
     STARTED = "started", "Started"
     COMPLETED = "completed", "Completed"
@@ -23,9 +23,9 @@ class StateGroup(models.TextChoices):
 # Default states
 DEFAULT_STATES = [
     {
-        "name": "Backlog",
-        "color": "#60646C",
-        "sequence": 15000,
+        "name": "In Review",
+        "color": "#0693E3",
+        "sequence": 40000,
         "group": StateGroup.BACKLOG.value,
         "default": True,
     },
@@ -49,7 +49,7 @@ DEFAULT_STATES = [
     },
     {
         "name": "Cancelled",
-        "color": "#9AA4BC",
+        "color": "#EF4444",
         "sequence": 55000,
         "group": StateGroup.CANCELLED.value,
     },

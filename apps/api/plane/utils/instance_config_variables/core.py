@@ -223,15 +223,6 @@ llm_config_variables = [
     },
 ]
 
-unsplash_config_variables = [
-    {
-        "key": "UNSPLASH_ACCESS_KEY",
-        "value": os.environ.get("UNSPLASH_ACCESS_KEY", ""),
-        "category": "UNSPLASH",
-        "is_encrypted": True,
-    },
-]
-
 intercom_config_variables = [
     {
         "key": "IS_INTERCOM_ENABLED",
@@ -256,6 +247,5 @@ core_config_variables = [
     *gitea_config_variables,
     *smtp_config_variables,
     *llm_config_variables,
-    *unsplash_config_variables,
     *intercom_config_variables,
 ]

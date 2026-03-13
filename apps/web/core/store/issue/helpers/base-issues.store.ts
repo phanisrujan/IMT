@@ -271,7 +271,7 @@ export abstract class BaseIssuesStore implements IBaseIssuesStore {
     return this.rootIssueStore.moduleId;
   }
 
-  // current Cycle Id from url
+  // current Sprint Id from url
   get cycleId() {
     return this.rootIssueStore.cycleId;
   }
@@ -726,7 +726,7 @@ export abstract class BaseIssuesStore implements IBaseIssuesStore {
     runInAction(() => {
       issueIds.forEach((issueId) => {
         const issueBeforeUpdate = clone(this.rootIssueStore.issues.getIssueById(issueId));
-        if (!issueBeforeUpdate) throw new Error("Work item not found");
+        if (!issueBeforeUpdate) throw new Error("Ticket not found");
         Object.keys(data.properties).forEach((key) => {
           const property = key as keyof TBulkOperationsPayload["properties"];
           const propertyValue = data.properties[property];
@@ -798,7 +798,7 @@ export abstract class BaseIssuesStore implements IBaseIssuesStore {
   }
 
   /**
-   * This method is used to add issues to a particular Cycle
+   * This method is used to add issues to a particular Sprint
    * @param workspaceSlug
    * @param projectId
    * @param cycleId
@@ -817,7 +817,7 @@ export abstract class BaseIssuesStore implements IBaseIssuesStore {
       issues: issueIds,
     });
 
-    // if cycle Id is the current Cycle Id then call fetch parent stats
+    // if cycle Id is the current Sprint Id then call fetch parent stats
     if (this.cycleId === cycleId) this.fetchParentStats(workspaceSlug, projectId);
 
     // if true, fetch the issue data for all the issueIds
@@ -853,7 +853,7 @@ export abstract class BaseIssuesStore implements IBaseIssuesStore {
     // Perform an APi call to remove issue from cycle
     await this.issueService.removeIssueFromCycle(workspaceSlug, projectId, cycleId, issueId);
 
-    // if cycle Id is the current Cycle Id then call fetch parent stats
+    // if cycle Id is the current Sprint Id then call fetch parent stats
     if (this.cycleId === cycleId) this.fetchParentStats(workspaceSlug, projectId, cycleId);
 
     runInAction(() => {
@@ -901,7 +901,7 @@ export abstract class BaseIssuesStore implements IBaseIssuesStore {
         issues: [issueId],
       });
 
-      // if cycle Id is the current Cycle Id then call fetch parent stats
+      // if cycle Id is the current Sprint Id then call fetch parent stats
       if (this.cycleId === cycleId || this.cycleId === issueCycleId)
         this.fetchParentStats(workspaceSlug, projectId, this.cycleId);
     } catch (error) {
@@ -944,7 +944,7 @@ export abstract class BaseIssuesStore implements IBaseIssuesStore {
       // make API call
       await this.issueService.removeIssueFromCycle(workspaceSlug, projectId, issueCycleId, issueId);
 
-      // if cycle Id is the current Cycle Id then call fetch parent stats
+      // if cycle Id is the current Sprint Id then call fetch parent stats
       if (this.cycleId === issueCycleId) this.fetchParentStats(workspaceSlug, projectId, issueCycleId);
     } catch (error) {
       // revert back changes if fails
@@ -1204,7 +1204,7 @@ export abstract class BaseIssuesStore implements IBaseIssuesStore {
     const issueId = issue?.id ?? issueBeforeUpdate?.id;
     if (!issueId) return;
 
-    // Get display filters to check if 'Show sub Work items' is enabled - Donot add Work item to main list if disabled.
+    // Get display filters to check if 'Show sub Tickets' is enabled - Donot add Ticket to main list if disabled.
     const isShowWorkItemsEnabled = this.issueFilterStore.issueFilters?.displayFilters?.sub_issue ?? false;
 
     // get issueUpdates from another method by passing down the three arguments

@@ -31,7 +31,7 @@ const PROJECT_FEATURES_LIST = {
   cycles: {
     key: "cycles",
     property: "cycle_view",
-    title: "Cycles",
+    title: "Sprints",
     description: "Timebox work as you see fit per project and change frequency from one period to the next.",
     icon: <CycleIcon className="h-5 w-5 flex-shrink-0 rotate-180 text-tertiary" />,
     isPro: false,
@@ -68,7 +68,7 @@ const PROJECT_FEATURES_LIST = {
     key: "intake",
     property: "inbox_view",
     title: "Intake",
-    description: "Consider and discuss work items before you add them to your project.",
+    description: "Consider and discuss tickets before you add them to your project.",
     icon: <IntakeIcon className="h-5 w-5 flex-shrink-0 text-tertiary" />,
     isPro: false,
     isEnabled: true,

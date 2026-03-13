@@ -17,7 +17,6 @@ export enum WORKSPACE_SETTINGS_CATEGORY {
 export const WORKSPACE_SETTINGS_CATEGORIES: WORKSPACE_SETTINGS_CATEGORY[] = [
   WORKSPACE_SETTINGS_CATEGORY.ADMINISTRATION,
   WORKSPACE_SETTINGS_CATEGORY.FEATURES,
-  WORKSPACE_SETTINGS_CATEGORY.DEVELOPER,
 ];
 
 export const WORKSPACE_SETTINGS: Record<TWorkspaceSettingsTabs, TWorkspaceSettingsItem> = {
@@ -58,17 +57,18 @@ export const WORKSPACE_SETTINGS: Record<TWorkspaceSettingsTabs, TWorkspaceSettin
   },
 };
 
-export const WORKSPACE_SETTINGS_ACCESS = Object.fromEntries(
-  Object.entries(WORKSPACE_SETTINGS).map(([_, { href, access }]) => [href, access])
-);
-
 export const GROUPED_WORKSPACE_SETTINGS: Record<WORKSPACE_SETTINGS_CATEGORY, TWorkspaceSettingsItem[]> = {
   [WORKSPACE_SETTINGS_CATEGORY.ADMINISTRATION]: [
     WORKSPACE_SETTINGS["general"],
     WORKSPACE_SETTINGS["members"],
-    WORKSPACE_SETTINGS["billing-and-plans"],
     WORKSPACE_SETTINGS["export"],
   ],
   [WORKSPACE_SETTINGS_CATEGORY.FEATURES]: [],
-  [WORKSPACE_SETTINGS_CATEGORY.DEVELOPER]: [WORKSPACE_SETTINGS["webhooks"]],
+  [WORKSPACE_SETTINGS_CATEGORY.DEVELOPER]: [],
 };
+
+export const WORKSPACE_SETTINGS_ACCESS = Object.fromEntries(
+  Object.values(GROUPED_WORKSPACE_SETTINGS)
+    .flat()
+    .map(({ href, access }) => [href, access])
+);

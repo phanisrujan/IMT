@@ -303,7 +303,7 @@ export default {
     "Identifikujte problémy medzi projektmi a zistite závislosti medzi cyklami, ktoré nie sú z iných pohľadov zrejmé.",
   analytics: "Analytika",
   workspace_invites: "Pozvánky do pracovného priestoru",
-  enter_god_mode: "Vstúpiť do božského režimu",
+  enter_god_mode: "Enter instance admin",
   workspace_logo: "Logo pracovného priestoru",
   new_issue: "Nová pracovná položka",
   your_work: "Vaša práca",

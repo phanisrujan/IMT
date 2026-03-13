@@ -308,7 +308,7 @@ export default {
     "Detecta desafíos de un proyecto a otro y ve dependencias entre ciclos que no son obvias desde ninguna otra vista.",
   analytics: "Análisis",
   workspace_invites: "Invitaciones al espacio de trabajo",
-  enter_god_mode: "Entrar en modo dios",
+  enter_god_mode: "Enter instance admin",
   workspace_logo: "Logo del espacio de trabajo",
   new_issue: "Nuevo elemento de trabajo",
   your_work: "Tu trabajo",

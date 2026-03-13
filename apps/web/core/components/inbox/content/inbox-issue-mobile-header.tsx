@@ -129,7 +129,7 @@ export const InboxIssueActionsMobileHeader = observer(function InboxIssueActions
               <CustomMenu.MenuItem onClick={handleCopyIssueLink}>
                 <div className="flex items-center gap-2">
                   <LinkIcon width={14} height={14} strokeWidth={2} />
-                  Copy work item link
+                  Copy ticket link
                 </div>
               </CustomMenu.MenuItem>
             )}
@@ -137,7 +137,7 @@ export const InboxIssueActionsMobileHeader = observer(function InboxIssueActions
               <CustomMenu.MenuItem onClick={() => router.push(workItemLink)}>
                 <div className="flex items-center gap-2">
                   <NewTabIcon width={14} height={14} strokeWidth={2} />
-                  Open work item
+                  Open ticket
                 </div>
               </CustomMenu.MenuItem>
             )}
@@ -147,7 +147,7 @@ export const InboxIssueActionsMobileHeader = observer(function InboxIssueActions
                   handleActionWithPermission(
                     isProjectAdmin,
                     handleIssueSnoozeAction,
-                    "Only project admins can snooze/Un-snooze work items"
+                    "Only project admins can snooze/Un-snooze tickets"
                   )
                 }
               >
@@ -163,7 +163,7 @@ export const InboxIssueActionsMobileHeader = observer(function InboxIssueActions
                   handleActionWithPermission(
                     isProjectAdmin,
                     () => setSelectDuplicateIssue(true),
-                    "Only project admins can mark work items as duplicate"
+                    "Only project admins can mark tickets as duplicate"
                   )
                 }
               >
@@ -179,7 +179,7 @@ export const InboxIssueActionsMobileHeader = observer(function InboxIssueActions
                   handleActionWithPermission(
                     isProjectAdmin,
                     () => setAcceptIssueModal(true),
-                    "Only project admins can accept work items"
+                    "Only project admins can accept tickets"
                   )
                 }
               >
@@ -195,7 +195,7 @@ export const InboxIssueActionsMobileHeader = observer(function InboxIssueActions
                   handleActionWithPermission(
                     isProjectAdmin,
                     () => setDeclineIssueModal(true),
-                    "Only project admins can deny work items"
+                    "Only project admins can deny tickets"
                   )
                 }
               >

@@ -49,13 +49,13 @@ export const StateDelete = observer(function StateDelete(props: TStateDelete) {
           type: TOAST_TYPE.ERROR,
           title: "Error!",
           message:
-            "This state contains some work items within it, please move them to some other state to delete this state.",
+            "This status contains some tickets within it, please move them to another status to delete it.",
         });
       } else {
         setToast({
           type: TOAST_TYPE.ERROR,
           title: "Error!",
-          message: "State could not be deleted. Please try again.",
+          message: "Status could not be deleted. Please try again.",
         });
       }
       setIsDelete(false);
@@ -69,11 +69,11 @@ export const StateDelete = observer(function StateDelete(props: TStateDelete) {
         handleSubmit={handleDeleteState}
         isSubmitting={isDelete}
         isOpen={isDeleteModal}
-        title="Delete State"
+        title="Delete Status"
         content={
           <>
-            Are you sure you want to delete state- <span className="font-medium text-primary">{state?.name}</span>? All
-            of the data related to the state will be permanently removed. This action cannot be undone.
+            Are you sure you want to delete status- <span className="font-medium text-primary">{state?.name}</span>?
+            All of the data related to this status will be permanently removed. This action cannot be undone.
           </>
         }
       />
@@ -89,7 +89,7 @@ export const StateDelete = observer(function StateDelete(props: TStateDelete) {
       >
         <Tooltip
           tooltipContent={
-            state.default ? "Cannot delete the default state." : totalStates === 1 ? `Cannot have an empty group.` : ``
+            state.default ? "Cannot delete the default status." : totalStates === 1 ? `Cannot have an empty group.` : ``
           }
           isMobile={isMobile}
           disabled={!isDeleteDisabled}

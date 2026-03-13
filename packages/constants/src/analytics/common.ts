@@ -124,11 +124,11 @@ export const ANALYTICS_DURATION_FILTER_OPTIONS = [
 export const ANALYTICS_X_AXIS_VALUES: { value: ChartXAxisProperty; label: string }[] = [
   {
     value: ChartXAxisProperty.STATES,
-    label: "State name",
+    label: "Status name",
   },
   {
     value: ChartXAxisProperty.STATE_GROUPS,
-    label: "State group",
+    label: "Status group",
   },
   {
     value: ChartXAxisProperty.PRIORITY,
@@ -148,7 +148,7 @@ export const ANALYTICS_X_AXIS_VALUES: { value: ChartXAxisProperty; label: string
   },
   {
     value: ChartXAxisProperty.CYCLES,
-    label: "Cycle",
+    label: "Sprint",
   },
   {
     value: ChartXAxisProperty.MODULES,

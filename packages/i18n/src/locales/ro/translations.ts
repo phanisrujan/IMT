@@ -305,7 +305,7 @@ export default {
     "Identifică provocările între proiecte și vezi dependențele între cicluri care altfel nu sunt evidente.",
   analytics: "Statistici",
   workspace_invites: "Invitațiile din spațiul de lucru",
-  enter_god_mode: "Activează modul Dumnezeu",
+  enter_god_mode: "Enter instance admin",
   workspace_logo: "Sigla spațiului de lucru",
   new_issue: "Activitate nouă",
   your_work: "Munca ta",

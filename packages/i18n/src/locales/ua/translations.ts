@@ -310,7 +310,7 @@ export default {
     "Виявляйте проблеми між проєктами та залежності між циклами, які неочевидні в інших поданнях.",
   analytics: "Аналітика",
   workspace_invites: "Запрошення до робочого простору",
-  enter_god_mode: "Увійти в режим Бога",
+  enter_god_mode: "Enter instance admin",
   workspace_logo: "Логотип робочого простору",
   new_issue: "Нова робоча одиниця",
   your_work: "Ваша робота",

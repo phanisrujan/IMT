@@ -4,13 +4,13 @@
  * See the LICENSE file for details.
  */
 
-import { Image, BrainCog, Cog, Mail } from "lucide-react";
+import { BrainCog, Cog, Mail } from "lucide-react";
 // plane imports
 import { LockIcon, WorkspaceIcon } from "@plane/propel/icons";
 // types
 import type { TSidebarMenuItem } from "./types";
 
-export type TCoreSidebarMenuKey = "general" | "email" | "workspace" | "authentication" | "ai" | "image";
+export type TCoreSidebarMenuKey = "general" | "email" | "workspace" | "authentication" | "ai";
 
 export const coreSidebarMenuLinks: Record<TCoreSidebarMenuKey, TSidebarMenuItem> = {
   general: {
@@ -40,13 +40,7 @@ export const coreSidebarMenuLinks: Record<TCoreSidebarMenuKey, TSidebarMenuItem>
   ai: {
     Icon: BrainCog,
     name: "Artificial intelligence",
-    description: "Configure your OpenAI creds.",
+    description: "Configure your AI creds.",
     href: `/ai/`,
-  },
-  image: {
-    Icon: Image,
-    name: "Images in IMT",
-    description: "Allow third-party image libraries.",
-    href: `/image/`,
   },
 };

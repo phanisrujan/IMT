@@ -71,7 +71,7 @@ export function IssueCommentToolbar(props: Props) {
     editorRef,
     submitButtonText = "common.comment",
   } = props;
-  // State to manage active states of toolbar items
+  // Status to manage active states of toolbar items
   const [activeStates, setActiveStates] = useState<Record<string, boolean>>({});
 
   // Function to update active states

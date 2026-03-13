@@ -10,7 +10,7 @@ type TPageHeader = {
 };
 
 export function PageHeader(props: TPageHeader) {
-  const { title = "God Mode - IMT", description = "IMT god mode" } = props;
+  const { title = "Instance Admin - IMT", description = "IMT instance admin" } = props;
 
   return (
     <>

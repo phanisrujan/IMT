@@ -77,7 +77,7 @@ export const GeneralProfileSettingsForm = observer(function GeneralProfileSettin
       email: user.email || "",
       role: profile.role || "Product / Project Manager",
       language: profile.language || "en",
-      user_timezone: user.user_timezone || "Asia/Kolkata",
+      user_timezone: user.user_timezone || "UTC",
     },
   });
   // derived values
@@ -283,11 +283,15 @@ export const GeneralProfileSettingsForm = observer(function GeneralProfileSettin
                 {errors.first_name && <span className="text-11 text-danger-primary">{errors.first_name.message}</span>}
               </div>
               <div className="flex flex-col gap-1">
-                <h4 className="text-13 font-medium text-secondary">{t("last_name")}</h4>
+                <h4 className="text-13 font-medium text-secondary">
+                  {t("last_name")}&nbsp;
+                  <span className="text-danger-primary">*</span>
+                </h4>
                 <Controller
                   control={control}
                   name="last_name"
                   rules={{
+                    required: "Please enter last name",
                     validate: validatePersonName,
                   }}
                   render={({ field: { value, onChange, ref } }) => (

@@ -24,5 +24,6 @@ from .admin import (
 
 from .workspace import (
     InstanceWorkSpaceAvailabilityCheckEndpoint,
+    InstanceWorkspaceGrantAdminAccessEndpoint,
     InstanceWorkSpaceEndpoint,
 )

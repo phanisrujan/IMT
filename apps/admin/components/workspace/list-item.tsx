@@ -4,11 +4,15 @@
  * See the LICENSE file for details.
  */
 
+import { useState } from "react";
 import { observer } from "mobx-react";
+import { LoaderCircle } from "lucide-react";
 
 // plane internal packages
 import { WEB_BASE_URL } from "@plane/constants";
 import { NewTabIcon } from "@plane/propel/icons";
+import { Button, getButtonStyling } from "@plane/propel/button";
+import { TOAST_TYPE, setToast } from "@plane/propel/toast";
 import { Tooltip } from "@plane/propel/tooltip";
 import { getFileURL } from "@plane/utils";
 // hooks
@@ -19,20 +23,42 @@ type TWorkspaceListItemProps = {
 };
 
 export const WorkspaceListItem = observer(function WorkspaceListItem({ workspaceId }: TWorkspaceListItemProps) {
+  const [isGrantingAccess, setIsGrantingAccess] = useState(false);
   // store hooks
-  const { getWorkspaceById } = useWorkspace();
+  const { getWorkspaceById, grantWorkspaceAdminAccess } = useWorkspace();
   // derived values
   const workspace = getWorkspaceById(workspaceId);
+  const workspaceRole = workspace?.role;
+  const canOpenWorkspace = typeof workspaceRole === "number" && workspaceRole >= 5;
+  const accessLabel =
+    workspaceRole === 20 ? "Admin access" : workspaceRole === 15 ? "Member access" : workspaceRole === 5 ? "Guest access" : "No access yet";
+  const workspaceURL = workspace ? `${WEB_BASE_URL}/${encodeURIComponent(workspace.slug)}` : "";
 
   if (!workspace) return null;
+
+  const handleGrantAccess = async () => {
+    try {
+      setIsGrantingAccess(true);
+      await grantWorkspaceAdminAccess(workspaceId);
+      setToast({
+        type: TOAST_TYPE.SUCCESS,
+        title: "Access updated",
+        message: "You now have admin access for this workspace.",
+      });
+    } catch (error) {
+      console.error(error);
+      setToast({
+        type: TOAST_TYPE.ERROR,
+        title: "Access update failed",
+        message: "Unable to grant workspace admin access.",
+      });
+    } finally {
+      setIsGrantingAccess(false);
+    }
+  };
+
   return (
-    <a
-      key={workspaceId}
-      href={`${WEB_BASE_URL}/${encodeURIComponent(workspace.slug)}`}
-      target="_blank"
-      className="group flex items-center justify-between gap-2.5 truncate rounded-lg border border-subtle bg-layer-1 p-3 hover:border-subtle-1 hover:bg-layer-1-hover hover:shadow-raised-100"
-      rel="noreferrer"
-    >
+    <div className="group flex items-center justify-between gap-4 truncate rounded-lg border border-subtle bg-layer-1 p-3 hover:border-subtle-1 hover:bg-layer-1-hover hover:shadow-raised-100">
       <div className="flex items-start gap-4">
         <span
           className={`relative mt-1 flex h-8 w-8 flex-shrink-0 items-center justify-center p-2 text-11 uppercase ${
@@ -55,6 +81,7 @@ export const WorkspaceListItem = observer(function WorkspaceListItem({ workspace
             <Tooltip tooltipContent="The unique URL of your workspace">
               <h4 className="text-13 text-tertiary">[{workspace.slug}]</h4>
             </Tooltip>
+            <span className="rounded-full border border-subtle px-2 py-0.5 text-11 text-tertiary">{accessLabel}</span>
           </div>
           {workspace.owner.email && (
             <div className="flex items-center gap-1 text-11">
@@ -81,9 +108,25 @@ export const WorkspaceListItem = observer(function WorkspaceListItem({ workspace
           </div>
         </div>
       </div>
-      <div className="flex-shrink-0">
-        <NewTabIcon width={14} height={16} className="text-placeholder group-hover:text-secondary" />
+      <div className="flex flex-shrink-0 items-center gap-2">
+        {canOpenWorkspace ? (
+          <a href={workspaceURL} target="_blank" rel="noreferrer" className={getButtonStyling("secondary", "sm")}>
+            Open workspace
+            <NewTabIcon width={13} height={13} className="ml-1" />
+          </a>
+        ) : (
+          <Button variant="primary" size="sm" onClick={handleGrantAccess} disabled={isGrantingAccess}>
+            {isGrantingAccess ? (
+              <span className="flex items-center gap-1.5">
+                <LoaderCircle className="h-3.5 w-3.5 animate-spin" />
+                Granting access
+              </span>
+            ) : (
+              "Grant me admin access"
+            )}
+          </Button>
+        )}
       </div>
-    </a>
+    </div>
   );
 });

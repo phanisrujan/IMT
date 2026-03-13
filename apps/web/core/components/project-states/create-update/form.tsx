@@ -90,7 +90,7 @@ export function StateForm(props: TStateForm) {
         <TextArea
           id="description"
           name="description"
-          placeholder="Describe this state for your members."
+          placeholder="Describe this status for your members."
           value={formData?.description}
           onChange={(e) => handleFormData("description", e.target.value)}
           hasError={(errors && Boolean(errors.description)) || false}

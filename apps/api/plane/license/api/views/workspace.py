@@ -6,7 +6,8 @@
 from rest_framework.response import Response
 from rest_framework import status
 from django.db import IntegrityError
-from django.db.models import OuterRef, Func, F
+from django.db.models import OuterRef, Func, F, Subquery, Value, IntegerField
+from django.db.models.functions import Coalesce
 
 # Module imports
 from plane.app.views.base import BaseAPIView
@@ -53,7 +54,17 @@ class InstanceWorkSpaceEndpoint(BaseAPIView):
             .values("count")
         )
 
-        workspaces = Workspace.objects.annotate(total_projects=project_count, total_members=member_count)
+        member_role = WorkspaceMember.objects.filter(
+            workspace=OuterRef("id"),
+            member=request.user,
+            is_active=True,
+        ).values("role")[:1]
+
+        workspaces = Workspace.objects.annotate(
+            total_projects=project_count,
+            total_members=member_count,
+            role=Coalesce(Subquery(member_role), Value(0), output_field=IntegerField()),
+        )
 
         # Add search functionality
         search = request.query_params.get("search", None)
@@ -108,3 +119,33 @@ class InstanceWorkSpaceEndpoint(BaseAPIView):
                     {"slug": "The workspace with the slug already exists"},
                     status=status.HTTP_409_CONFLICT,
                 )
+
+
+class InstanceWorkspaceGrantAdminAccessEndpoint(BaseAPIView):
+    permission_classes = [InstanceAdminPermission]
+
+    def post(self, request, workspace_id):
+        workspace = Workspace.objects.filter(pk=workspace_id).first()
+        if workspace is None:
+            return Response({"error": "Workspace does not exist"}, status=status.HTTP_404_NOT_FOUND)
+
+        workspace_member, _ = WorkspaceMember.objects.get_or_create(
+            workspace=workspace,
+            member=request.user,
+            defaults={"role": 20, "company_role": ""},
+        )
+
+        should_update = workspace_member.role < 20 or workspace_member.is_active is False
+        if should_update:
+            workspace_member.role = 20
+            workspace_member.is_active = True
+            workspace_member.save(update_fields=["role", "is_active", "updated_at"])
+
+        return Response(
+            {
+                "workspace_id": str(workspace.id),
+                "workspace_slug": workspace.slug,
+                "role": workspace_member.role,
+            },
+            status=status.HTTP_200_OK,
+        )

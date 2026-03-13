@@ -6,7 +6,7 @@
 
 import { observer } from "mobx-react";
 // plane types
-import { EUserPermissionsLevel, WORKSPACE_SETTINGS } from "@plane/constants";
+import { EUserPermissionsLevel, GROUPED_WORKSPACE_SETTINGS, WORKSPACE_SETTINGS } from "@plane/constants";
 // components
 import { useTranslation } from "@plane/i18n";
 import type { TPowerKContext } from "@/components/power-k/core/types";
@@ -26,9 +26,11 @@ export const PowerKOpenWorkspaceSettingsMenu = observer(function PowerKOpenWorks
   const { t } = useTranslation();
   // store hooks
   const { allowPermissions } = useUserPermissions();
+  const visibleSettingKeys = new Set(Object.values(GROUPED_WORKSPACE_SETTINGS).flat().map((setting) => setting.key));
   // derived values
   const settingsList = Object.values(WORKSPACE_SETTINGS).filter(
     (setting) =>
+      visibleSettingKeys.has(setting.key) &&
       context.params.workspaceSlug &&
       allowPermissions(setting.access, EUserPermissionsLevel.WORKSPACE, context.params.workspaceSlug?.toString())
   );

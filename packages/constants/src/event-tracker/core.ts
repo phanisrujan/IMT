@@ -71,7 +71,7 @@ export const PROJECT_TRACKER_ELEMENTS = {
 
 /**
  * ===========================================================================
- * Cycle Events and Elements
+ * Sprint Events and Elements
  * ===========================================================================
  */
 export const CYCLE_TRACKER_EVENTS = {
@@ -189,7 +189,7 @@ export const WORK_ITEM_TRACKER_ELEMENTS = {
 
 /**
  * ===========================================================================
- * State Events and Elements
+ * Status Events and Elements
  * ===========================================================================
  */
 export const STATE_TRACKER_EVENTS = {

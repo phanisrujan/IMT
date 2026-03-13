@@ -30,7 +30,7 @@ export const meta = () => [
   {
     name: "keywords",
     content:
-      "software development, plan, ship, software, accelerate, code management, release management, project management, work item tracking, agile, scrum, kanban, collaboration",
+      "software development, plan, ship, software, accelerate, code management, release management, project management, ticket tracking, agile, scrum, kanban, collaboration",
   },
   {
     name: "viewport",
@@ -40,7 +40,7 @@ export const meta = () => [
   { property: "og:title", content: "IMT | Issue management for modern teams." },
   {
     property: "og:description",
-    content: "Self-hosted issue and project management for work items, cycles, and product roadmaps.",
+    content: "Self-hosted issue and project management for tickets, cycles, and product roadmaps.",
   },
   { property: "og:url", content: "https://github.com/phanisrujan/IMT" },
   { property: "og:image", content: "https://github.com/phanisrujan/IMT" },

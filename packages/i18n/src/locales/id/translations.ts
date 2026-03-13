@@ -305,7 +305,7 @@ export default {
     "Identifikasi tantangan dari satu proyek ke proyek lainnya dan lihat ketergantungan antar siklus yang tidak terlihat dari tampilan lain mana pun.",
   analytics: "Analitik",
   workspace_invites: "Undangan ruang kerja",
-  enter_god_mode: "Masuk ke mode dewa",
+  enter_god_mode: "Enter instance admin",
   workspace_logo: "Logo ruang kerja",
   new_issue: "Item kerja baru",
   your_work: "Pekerjaan Anda",

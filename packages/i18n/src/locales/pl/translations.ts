@@ -302,7 +302,7 @@ export default {
     "Identyfikuj problemy między projektami i odkrywaj zależności między cyklami, niewidoczne w innych widokach.",
   analytics: "Analizy",
   workspace_invites: "Zaproszenia do przestrzeni roboczej",
-  enter_god_mode: "Wejdź w tryb boga",
+  enter_god_mode: "Enter instance admin",
   workspace_logo: "Logo przestrzeni roboczej",
   new_issue: "Nowy element pracy",
   your_work: "Twoja praca",

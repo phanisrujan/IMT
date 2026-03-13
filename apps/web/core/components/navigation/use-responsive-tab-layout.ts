@@ -40,7 +40,7 @@ export const useResponsiveTabLayout = ({
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
   const resizeObserverRef = useRef<ResizeObserver | null>(null);
 
-  // State for responsive behavior
+  // Status for responsive behavior
   const [containerWidth, setContainerWidth] = useState<number>(0);
   const [visibleCount, setVisibleCount] = useState<number>(visibleNavigationItems.length);
 

@@ -100,7 +100,7 @@ export const SubIssueFilters = observer(function SubIssueFilters(props: TSubIssu
               </div>
             )}
 
-            {/* State */}
+            {/* Status */}
             {isFilterEnabled("state") && (
               <div className="py-2">
                 <FilterState
@@ -123,7 +123,7 @@ export const SubIssueFilters = observer(function SubIssueFilters(props: TSubIssu
               </div>
             )}
 
-            {/* work item types */}
+            {/* ticket types */}
             {isFilterEnabled("issue_type") && (
               <div className="py-2">
                 <FilterIssueTypes

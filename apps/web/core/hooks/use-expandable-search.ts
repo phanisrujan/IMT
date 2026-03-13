@@ -82,7 +82,7 @@ export const useExpandableSearch = (options?: UseExpandableSearchOptions) => {
   }, [isOpen]);
 
   return {
-    // State
+    // Status
     isOpen,
     setIsOpen,
 

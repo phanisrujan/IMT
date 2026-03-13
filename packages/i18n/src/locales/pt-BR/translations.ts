@@ -304,7 +304,7 @@ export default {
     "Identifique desafios de um projeto para outro e veja as dependências entre ciclos que não são óbvias em nenhuma outra visualização.",
   analytics: "Análises",
   workspace_invites: "Convites para o espaço de trabalho",
-  enter_god_mode: "Entrar no God Mode",
+  enter_god_mode: "Enter instance admin",
   workspace_logo: "Logo do espaço de trabalho",
   new_issue: "Novo item de trabalho",
   your_work: "Seu trabalho",

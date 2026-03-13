@@ -20,12 +20,12 @@ const ARCHIVES_TAB_LIST: {
 }[] = [
   {
     key: "issues",
-    label: "Work items",
+    label: "Tickets",
     shouldRender: () => true,
   },
   {
     key: "cycles",
-    label: "Cycles",
+    label: "Sprints",
     shouldRender: (projectDetails) => projectDetails.cycle_view,
   },
   {

@@ -309,7 +309,7 @@ export default {
     "Identifizieren Sie projektübergreifende Probleme und erkennen Sie Abhängigkeiten zwischen Zyklen, die sonst nicht offensichtlich wären.",
   analytics: "Analysen",
   workspace_invites: "Einladungen zum Arbeitsbereich",
-  enter_god_mode: "God-Mode betreten",
+  enter_god_mode: "Enter instance admin",
   workspace_logo: "Arbeitsbereichslogo",
   new_issue: "Neues Arbeitselement",
   your_work: "Ihre Arbeit",

@@ -17,12 +17,12 @@ const sidebarOptions: {
 }[] = [
   {
     key: "work-items",
-    label: "Work items",
+    label: "Tickets",
     Icon: WorkItemsIcon,
   },
   {
     key: "cycles",
-    label: "Cycles",
+    label: "Sprints",
     Icon: CycleIcon,
   },
   {

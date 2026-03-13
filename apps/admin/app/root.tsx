@@ -67,7 +67,7 @@ export const meta: Route.MetaFunction = () => [
   {
     name: "keywords",
     content:
-      "software development, customer feedback, software, accelerate, code management, release management, project management, work items tracking, agile, scrum, kanban, collaboration",
+      "software development, customer feedback, software, accelerate, code management, release management, project management, ticket tracking, agile, scrum, kanban, collaboration",
   },
   { name: "twitter:site", content: "@IMT" },
 ];
