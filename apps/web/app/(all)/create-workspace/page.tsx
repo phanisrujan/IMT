@@ -58,22 +58,19 @@ const CreateWorkspacePage = observer(function CreateWorkspacePage() {
 
   return (
     <AuthenticationWrapper>
-      <div className="flex h-full flex-col gap-y-2 overflow-hidden bg-surface-1 sm:flex-row sm:gap-y-0">
-        <div className="relative h-1/6 flex-shrink-0 sm:w-2/12 md:w-3/12 lg:w-1/5">
-          <div className="absolute top-1/2 left-0 h-[0.5px] w-full -translate-y-1/2 border-b-[0.5px] border-subtle sm:top-0 sm:left-1/2 sm:h-screen sm:w-[0.5px] sm:-translate-x-1/2 sm:translate-y-0 sm:border-r-[0.5px] md:left-1/3" />
-          <Link
-            className="absolute top-1/2 left-5 grid -translate-y-1/2 place-items-center px-3 sm:top-12 sm:left-1/2 sm:-translate-x-[15px] sm:translate-y-0 sm:px-0 sm:py-5 md:left-1/3"
-            href="/"
-          >
-            <PlaneLogo className="h-9 w-auto text-primary" />
-          </Link>
-          <div className="absolute top-1/4 right-4 -translate-y-1/2 text-13 text-primary sm:fixed sm:top-12 sm:right-16 sm:translate-y-0 sm:py-5">
-            {currentUser?.email}
-          </div>
+      <div className="flex h-full flex-col gap-y-2 overflow-hidden bg-surface-1 sm:flex-row sm:gap-y-0 relative">
+        <Link
+          className="absolute z-10 top-5 left-5 sm:fixed sm:top-12 sm:left-16"
+          href="/"
+        >
+          <PlaneLogo className="h-9 w-auto text-primary" />
+        </Link>
+        <div className="absolute z-10 top-5 right-5 text-13 text-primary sm:fixed sm:top-12 sm:right-16">
+          {currentUser?.email}
         </div>
-        <div className="relative flex h-full justify-center px-8 pb-8 sm:w-10/12 sm:items-center sm:justify-start sm:p-0 sm:pr-[8.33%] md:w-9/12 lg:w-4/5">
+        <div className="relative flex h-full w-full justify-center items-center px-8 pb-8 pt-24 sm:p-0">
           {isWorkspaceCreationDisabled ? (
-            <div className="flex h-full w-4/5 flex-col items-center justify-center gap-1 text-16 font-medium">
+            <div className="flex h-full w-full max-w-2xl sm:w-3/4 md:w-2/5 flex-col items-center justify-center gap-1 text-16 font-medium">
               <img
                 src={WorkspaceCreationDisabled}
                 className="mb-4 h-full w-full object-contain"
@@ -95,7 +92,7 @@ const CreateWorkspacePage = observer(function CreateWorkspacePage() {
               </div>
             </div>
           ) : (
-            <div className="w-full space-y-7 sm:space-y-10">
+            <div className="w-full max-w-2xl sm:w-3/4 md:w-2/5 space-y-7 sm:space-y-10">
               <h4 className="text-20 font-semibold">{t("workspace_creation.heading")}</h4>
               <div className="sm:w-3/4 md:w-2/5">
                 <CreateWorkspaceForm

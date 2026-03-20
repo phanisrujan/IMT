@@ -46,6 +46,10 @@ type Props = {
    */
   disabledExtensions?: TExtensions[];
   /**
+   * @description Drag and drop enabled, this will be used to enable/disable the drag and drop extension in the editor
+   */
+  dragDropEnabled?: boolean;
+  /**
    * @description Editor ref, this will be used to imperatively attach editor related helper functions
    */
   editorRef?: React.RefObject<EditorRefApi>;
@@ -110,6 +114,7 @@ export const DescriptionInput = observer(function DescriptionInput(props: Props)
     containerClassName,
     disabled,
     disabledExtensions,
+    dragDropEnabled,
     editorRef,
     entityId,
     fileAssetType,
@@ -241,7 +246,7 @@ export const DescriptionInput = observer(function DescriptionInput(props: Props)
           workspaceSlug={workspaceSlug}
           workspaceId={workspaceDetails.id}
           projectId={projectId}
-          dragDropEnabled
+          dragDropEnabled={dragDropEnabled !== undefined ? dragDropEnabled : true}
           onChange={(description_json, description_html, options) => {
             if (description_html === lastSavedContent.current) return;
             setIsSubmitting("submitting");
@@ -274,7 +279,7 @@ export const DescriptionInput = observer(function DescriptionInput(props: Props)
               return asset_id;
             } catch (error) {
               console.log("Error in uploading asset:", error);
-              throw new Error("Asset upload failed. Please try again later.");
+              throw new Error("Asset upload failed. Please try again later.", { cause: error });
             }
           }}
           duplicateFile={async (assetId: string) => {

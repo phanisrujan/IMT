@@ -14,13 +14,11 @@ import type { TIssue, TNameDescriptionLoader } from "@plane/types";
 import { EFileAssetType, EInboxIssueSource, EInboxIssueStatus } from "@plane/types";
 import { getTextContent } from "@plane/utils";
 // components
-import { DescriptionVersionsRoot } from "@/components/core/description-versions";
 import { DescriptionInput } from "@/components/editor/rich-text/description-input";
 import { DescriptionInputLoader } from "@/components/editor/rich-text/description-input/loader";
 import { IssueAttachmentRoot } from "@/components/issues/attachment";
 import type { TIssueOperations } from "@/components/issues/issue-detail";
 import { IssueActivity } from "@/components/issues/issue-detail/issue-activity";
-import { IssueReaction } from "@/components/issues/issue-detail/reactions";
 import { IssueTitleInput } from "@/components/issues/title-input";
 // hooks
 import { useIssueDetail } from "@/hooks/store/use-issue-detail";
@@ -33,13 +31,11 @@ import useReloadConfirmations from "@/hooks/use-reload-confirmation";
 import { DeDupeIssuePopoverRoot } from "@/plane-web/components/de-dupe/duplicate-popover";
 import { useDebouncedDuplicateIssues } from "@/plane-web/hooks/use-debounced-duplicate-issues";
 // services
-import { IntakeWorkItemVersionService } from "@/services/inbox";
 // stores
 import type { IInboxIssueStore } from "@/store/inbox/inbox-issue.store";
 // local imports
 import { InboxIssueContentProperties } from "./issue-properties";
 // services init
-const intakeWorkItemVersionService = new IntakeWorkItemVersionService();
 
 type Props = {
   workspaceSlug: string;
@@ -190,39 +186,6 @@ export const InboxIssueMainContent = observer(function InboxIssueMainContent(pro
           />
         )}
 
-        <div className="flex items-center justify-between gap-2">
-          {currentUser && (
-            <IssueReaction
-              workspaceSlug={workspaceSlug}
-              projectId={projectId}
-              issueId={issue.id}
-              currentUser={currentUser}
-            />
-          )}
-          {isEditable && (
-            <DescriptionVersionsRoot
-              className="flex-shrink-0"
-              entityInformation={{
-                createdAt: issue.created_at ? new Date(issue.created_at) : new Date(),
-                createdByDisplayName:
-                  inboxIssue.source === EInboxIssueSource.FORMS
-                    ? "Intake Form user"
-                    : (getUserDetails(issue.created_by ?? "")?.display_name ?? ""),
-                id: issue.id,
-                isRestoreDisabled: !isEditable,
-              }}
-              fetchHandlers={{
-                listDescriptionVersions: (issueId) =>
-                  intakeWorkItemVersionService.listDescriptionVersions(workspaceSlug, projectId, issueId),
-                retrieveDescriptionVersion: (issueId, versionId) =>
-                  intakeWorkItemVersionService.retrieveDescriptionVersion(workspaceSlug, projectId, issueId, versionId),
-              }}
-              handleRestore={(descriptionHTML) => editorRef.current?.setEditorValue(descriptionHTML, true)}
-              projectId={projectId}
-              workspaceSlug={workspaceSlug}
-            />
-          )}
-        </div>
       </div>
 
       <div className="py-4">

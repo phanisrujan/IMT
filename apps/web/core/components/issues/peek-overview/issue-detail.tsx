@@ -14,7 +14,6 @@ import type { TNameDescriptionLoader } from "@plane/types";
 // components
 import { getTextContent } from "@plane/utils";
 // components
-import { DescriptionVersionsRoot } from "@/components/core/description-versions";
 import { DescriptionInput } from "@/components/editor/rich-text/description-input";
 // hooks
 import { useIssueDetail } from "@/hooks/store/use-issue-detail";
@@ -28,14 +27,11 @@ import { IssueTypeSwitcher } from "@/plane-web/components/issues/issue-details/i
 // plane web hooks
 import { useDebouncedDuplicateIssues } from "@/plane-web/hooks/use-debounced-duplicate-issues";
 // services
-import { WorkItemVersionService } from "@/services/issue";
 // local components
 import type { TIssueOperations } from "../issue-detail";
 import { IssueParentDetail } from "../issue-detail/parent";
-import { IssueReaction } from "../issue-detail/reactions";
 import { IssueTitleInput } from "../title-input";
 // services init
-const workItemVersionService = new WorkItemVersionService();
 
 type Props = {
   editorRef: React.RefObject<EditorRefApi>;
@@ -153,46 +149,76 @@ export const PeekOverviewIssueDetails = observer(function PeekOverviewIssueDetai
         workspaceSlug={workspaceSlug}
       />
 
-      <div className="flex items-center justify-between gap-2">
-        {currentUser && (
-          <IssueReaction
-            workspaceSlug={workspaceSlug}
-            projectId={issue.project_id}
-            issueId={issueId}
-            currentUser={currentUser}
-            disabled={isArchived}
-          />
-        )}
-        {!disabled && (
-          <DescriptionVersionsRoot
-            className="flex-shrink-0"
-            entityInformation={{
-              createdAt: issue.created_at ? new Date(issue.created_at) : new Date(),
-              createdByDisplayName: getUserDetails(issue.created_by ?? "")?.display_name ?? "",
-              id: issueId,
-              isRestoreDisabled: disabled || isArchived,
-            }}
-            fetchHandlers={{
-              listDescriptionVersions: (issueId) =>
-                workItemVersionService.listDescriptionVersions(
-                  workspaceSlug,
-                  issue.project_id?.toString() ?? "",
-                  issueId
-                ),
-              retrieveDescriptionVersion: (issueId, versionId) =>
-                workItemVersionService.retrieveDescriptionVersion(
-                  workspaceSlug,
-                  issue.project_id?.toString() ?? "",
-                  issueId,
-                  versionId
-                ),
-            }}
-            handleRestore={(descriptionHTML) => editorRef.current?.setEditorValue(descriptionHTML, true)}
-            projectId={issue.project_id}
-            workspaceSlug={workspaceSlug}
-          />
-        )}
-      </div>
+      {/* RCA Sections */}
+      <div className="text-xs font-medium text-custom-text-200 mt-2 mb-1">Interim Corrective Action</div>
+      <DescriptionInput
+        issueSequenceId={issue.sequence_id}
+        containerClassName="small-font line-spacing-small -ml-3 border-none text-sm"
+        dragDropEnabled={false}
+        placeholder={() => "Click to add ICA"}
+        disabled={disabled || isArchived}
+        entityId={`${issue.id}-ica`}
+        fileAssetType={EFileAssetType.ISSUE_DESCRIPTION}
+        initialValue={issue.ica_html}
+        key={`${issue.id}-ica`}
+        onSubmit={async (value, isMigrationUpdate) => {
+          if (!issue.id || !issue.project_id) return;
+          await issueOperations.update(workspaceSlug, issue.project_id, issue.id, {
+            ica_html: value.description_html,
+            ...(isMigrationUpdate ? { skip_activity: "true" } : {}),
+          });
+        }}
+        setIsSubmitting={(value) => setIsSubmitting(value)}
+        projectId={issue.project_id}
+        workspaceSlug={workspaceSlug}
+      />
+
+      <div className="text-xs font-medium text-custom-text-200 mt-2 mb-1">Permanent Corrective Action</div>
+      <DescriptionInput
+        issueSequenceId={issue.sequence_id}
+        containerClassName="small-font line-spacing-small -ml-3 border-none text-sm"
+        dragDropEnabled={false}
+        placeholder={() => "Click to add PCA"}
+        disabled={disabled || isArchived}
+        entityId={`${issue.id}-pca`}
+        fileAssetType={EFileAssetType.ISSUE_DESCRIPTION}
+        initialValue={issue.pca_html}
+        key={`${issue.id}-pca`}
+        onSubmit={async (value, isMigrationUpdate) => {
+          if (!issue.id || !issue.project_id) return;
+          await issueOperations.update(workspaceSlug, issue.project_id, issue.id, {
+            pca_html: value.description_html,
+            ...(isMigrationUpdate ? { skip_activity: "true" } : {}),
+          });
+        }}
+        setIsSubmitting={(value) => setIsSubmitting(value)}
+        projectId={issue.project_id}
+        workspaceSlug={workspaceSlug}
+      />
+
+      <div className="text-xs font-medium text-custom-text-200 mt-2 mb-1">Root Cause Analysis</div>
+      <DescriptionInput
+        issueSequenceId={issue.sequence_id}
+        containerClassName="small-font line-spacing-small -ml-3 border-none text-sm"
+        dragDropEnabled={false}
+        placeholder={() => "Click to add RCA"}
+        disabled={disabled || isArchived}
+        entityId={`${issue.id}-rca`}
+        fileAssetType={EFileAssetType.ISSUE_DESCRIPTION}
+        initialValue={issue.rca_html}
+        key={`${issue.id}-rca`}
+        onSubmit={async (value, isMigrationUpdate) => {
+          if (!issue.id || !issue.project_id) return;
+          await issueOperations.update(workspaceSlug, issue.project_id, issue.id, {
+            rca_html: value.description_html,
+            ...(isMigrationUpdate ? { skip_activity: "true" } : {}),
+          });
+        }}
+        setIsSubmitting={(value) => setIsSubmitting(value)}
+        projectId={issue.project_id}
+        workspaceSlug={workspaceSlug}
+      />
+
     </div>
   );
 });

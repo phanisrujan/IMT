@@ -196,46 +196,89 @@ export const ProfileSetupStep = observer(function ProfileSetupStep({ handleStepC
 
       <div className="flex w-full flex-col gap-6">
         {/* Name Input */}
-        <div className="flex flex-col gap-2">
-          <label
-            className="block text-13 font-medium text-tertiary after:ml-0.5 after:text-danger-primary after:content-['*']"
-            htmlFor="first_name"
-          >
-            Name
-          </label>
-          <Controller
-            control={control}
-            name="first_name"
-            rules={{
-              required: "Name is required",
-              validate: validatePersonName,
-              maxLength: {
-                value: 50,
-                message: "Name must be within 50 characters.",
-              },
-            }}
-            render={({ field: { value, onChange, ref } }) => (
-              <input
-                ref={ref}
-                id="first_name"
-                name="first_name"
-                type="text"
-                value={value}
-                onChange={(e) => onChange(e.target.value)}
-                autoFocus
-                className={cn(
-                  "w-full rounded-md border border-strong bg-surface-1 px-3 py-2 text-secondary transition-all duration-200 placeholder:text-placeholder focus:border-transparent focus:ring-2 focus:ring-accent-strong focus:outline-none",
-                  {
-                    "border-strong": !errors.first_name,
-                    "border-danger-strong": errors.first_name,
-                  }
-                )}
-                placeholder="Enter your full name"
-                autoComplete="on"
-              />
-            )}
-          />
-          {errors.first_name && <span className="text-13 text-danger-primary">{errors.first_name.message}</span>}
+        <div className="flex w-full items-center gap-4">
+          <div className="flex w-full flex-col gap-2">
+            <label
+              className="block text-13 font-medium text-tertiary after:ml-0.5 after:text-danger-primary after:content-['*']"
+              htmlFor="first_name"
+            >
+              First Name
+            </label>
+            <Controller
+              control={control}
+              name="first_name"
+              rules={{
+                required: "First name is required",
+                validate: validatePersonName,
+                maxLength: {
+                  value: 50,
+                  message: "First name must be within 50 characters.",
+                },
+              }}
+              render={({ field: { value, onChange, ref } }) => (
+                <input
+                  ref={ref}
+                  id="first_name"
+                  name="first_name"
+                  type="text"
+                  value={value}
+                  onChange={(e) => onChange(e.target.value)}
+                  autoFocus
+                  className={cn(
+                    "w-full rounded-md border border-strong bg-surface-1 px-3 py-2 text-secondary transition-all duration-200 placeholder:text-placeholder focus:border-transparent focus:ring-2 focus:ring-accent-strong focus:outline-none",
+                    {
+                      "border-strong": !errors.first_name,
+                      "border-danger-strong": errors.first_name,
+                    }
+                  )}
+                  placeholder="John"
+                  autoComplete="on"
+                />
+              )}
+            />
+            {errors.first_name && <span className="text-13 text-danger-primary">{errors.first_name.message}</span>}
+          </div>
+
+          <div className="flex w-full flex-col gap-2">
+            <label
+              className="block text-13 font-medium text-tertiary after:ml-0.5 after:text-danger-primary after:content-['*']"
+              htmlFor="last_name"
+            >
+              Last Name
+            </label>
+            <Controller
+              control={control}
+              name="last_name"
+              rules={{
+                required: "Last name is required",
+                validate: validatePersonName,
+                maxLength: {
+                  value: 50,
+                  message: "Last name must be within 50 characters.",
+                },
+              }}
+              render={({ field: { value, onChange, ref } }) => (
+                <input
+                  ref={ref}
+                  id="last_name"
+                  name="last_name"
+                  type="text"
+                  value={value}
+                  onChange={(e) => onChange(e.target.value)}
+                  className={cn(
+                    "w-full rounded-md border border-strong bg-surface-1 px-3 py-2 text-secondary transition-all duration-200 placeholder:text-placeholder focus:border-transparent focus:ring-2 focus:ring-accent-strong focus:outline-none",
+                    {
+                      "border-strong": !errors.last_name,
+                      "border-danger-strong": errors.last_name,
+                    }
+                  )}
+                  placeholder="Doe"
+                  autoComplete="on"
+                />
+              )}
+            />
+            {errors.last_name && <span className="text-13 text-danger-primary">{errors.last_name.message}</span>}
+          </div>
         </div>
 
         {/* setting up password for the first time */}

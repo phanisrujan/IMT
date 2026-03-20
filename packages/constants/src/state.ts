@@ -34,7 +34,7 @@ export const STATE_GROUPS: {
   backlog: {
     key: "backlog",
     label: "Validation",
-    defaultStateName: "In Review",
+    defaultStateName: "Backlog",
     color: "#0693E3",
   },
   completed: {

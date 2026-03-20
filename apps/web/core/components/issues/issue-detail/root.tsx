@@ -94,13 +94,8 @@ export const IssueDetailRoot = observer(function IssueDetailRoot(props: TIssueDe
       update: async (workspaceSlug: string, projectId: string, issueId: string, data: Partial<TIssue>) => {
         try {
           await updateIssue(workspaceSlug, projectId, issueId, data);
-        } catch (error) {
-          console.log("Error in updating issue:", error);
-          setToast({
-            title: t("common.error.label"),
-            type: TOAST_TYPE.ERROR,
-            message: t("entity.update.failed", { entity: t("issue.label") }),
-          });
+        } catch (error: any) {
+          console.error("Error in updating issue from sidebar:", error);
         }
       },
       remove: async (workspaceSlug: string, projectId: string, issueId: string) => {

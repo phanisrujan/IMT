@@ -111,23 +111,20 @@ function UserInvitationsPage() {
 
   return (
     <AuthenticationWrapper>
-      <div className="flex h-full flex-col gap-y-2 overflow-hidden sm:flex-row sm:gap-y-0">
-        <div className="relative h-1/6 flex-shrink-0 sm:w-2/12 md:w-3/12 lg:w-1/5">
-          <div className="absolute top-1/2 left-0 h-[0.5px] w-full -translate-y-1/2 border-b-[0.5px] border-subtle sm:top-0 sm:left-1/2 sm:h-screen sm:w-[0.5px] sm:-translate-x-1/2 sm:translate-y-0 sm:border-r-[0.5px] md:left-1/3" />
-          <Link
-            href="/"
-            className="absolute top-1/2 left-5 z-10 grid -translate-y-1/2 place-items-center px-3 sm:top-12 sm:left-1/2 sm:-translate-x-[15px] sm:translate-y-0 sm:px-0 sm:py-5 md:left-1/3"
-          >
-            <PlaneLogo className="h-9 w-auto text-primary" />
-          </Link>
-          <div className="absolute top-1/4 right-4 -translate-y-1/2 text-13 text-primary sm:fixed sm:top-12 sm:right-16 sm:translate-y-0 sm:py-5">
-            {currentUser?.email}
-          </div>
+      <div className="flex h-full flex-col gap-y-2 overflow-hidden sm:flex-row sm:gap-y-0 relative">
+        <Link
+          href="/"
+          className="absolute z-10 top-5 left-5 sm:fixed sm:top-12 sm:left-16"
+        >
+          <PlaneLogo className="h-9 w-auto text-primary" />
+        </Link>
+        <div className="absolute z-10 top-5 right-5 text-13 text-primary sm:fixed sm:top-12 sm:right-16">
+          {currentUser?.email}
         </div>
         {invitations ? (
           invitations.length > 0 ? (
-            <div className="relative flex h-full justify-center px-8 pb-8 sm:w-10/12 sm:items-center sm:justify-start sm:p-0 sm:pr-[8.33%] md:w-9/12 lg:w-4/5">
-              <div className="w-full space-y-10">
+            <div className="relative flex h-full w-full justify-center items-center px-8 pb-8 pt-24 sm:p-0">
+              <div className="w-full max-w-2xl sm:w-3/4 md:w-2/5 space-y-10">
                 <h5 className="text-16">{t("we_see_that_someone_has_invited_you_to_join_a_workspace")}</h5>
                 <h4 className="text-20 font-semibold">{t("join_a_workspace")}</h4>
                 <div className="max-h-[37vh] space-y-4 overflow-y-auto md:w-3/5">

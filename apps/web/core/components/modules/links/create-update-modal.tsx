@@ -56,14 +56,14 @@ export function CreateUpdateModuleLinkModal(props: Props) {
         setToast({
           type: TOAST_TYPE.SUCCESS,
           title: "Success!",
-          message: "Module link created successfully.",
+          message: "Epic link created successfully.",
         });
       } else {
         await updateLink(payload, data.id);
         setToast({
           type: TOAST_TYPE.SUCCESS,
           title: "Success!",
-          message: "Module link updated successfully.",
+          message: "Epic link updated successfully.",
         });
       }
       onClose();
@@ -90,7 +90,7 @@ export function CreateUpdateModuleLinkModal(props: Props) {
           <h3 className="text-18 font-medium text-secondary">{data ? "Update" : "Add"} link</h3>
           <div className="mt-2 space-y-3">
             <div>
-              <label htmlFor="url" className="mb-2 text-secondary">
+              <label htmlFor="url" className="mb-2 block text-secondary">
                 URL
               </label>
               <Controller
@@ -114,9 +114,9 @@ export function CreateUpdateModuleLinkModal(props: Props) {
               />
             </div>
             <div>
-              <label htmlFor="title" className="mb-2 text-secondary">
-                Display title
-                <span className="block text-10">Optional</span>
+              <label htmlFor="title" className="mb-2 block text-secondary">
+                Display title{" "}
+                <span className="text-10 text-custom-text-400">(Optional)</span>
               </label>
               <Controller
                 control={control}

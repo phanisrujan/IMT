@@ -53,7 +53,7 @@ export const DeleteModuleModal = observer(function DeleteModuleModal(props: Prop
         setToast({
           type: TOAST_TYPE.SUCCESS,
           title: "Success!",
-          message: "Module deleted successfully.",
+          message: "Epic deleted successfully.",
         });
       })
       .catch((errors) => {

@@ -119,7 +119,7 @@ export const PLANS_COMPARISON_LIST: TPlansComparisonDetails[] = [
         },
       },
       {
-        title: "Modules",
+        title: "Epics",
         description: "Group replicable work in modules with their own\nleads.",
         cloud: {
           free: true,

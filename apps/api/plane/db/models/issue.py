@@ -134,6 +134,9 @@ class Issue(ProjectBaseModel):
     name = models.CharField(max_length=255, verbose_name="Issue Name")
     description_json = models.JSONField(blank=True, default=dict)
     description_html = models.TextField(blank=True, default="<p></p>")
+    ica_html = models.TextField(blank=True, default="<p></p>")
+    pca_html = models.TextField(blank=True, default="<p></p>")
+    rca_html = models.TextField(blank=True, default="<p></p>")
     description_stripped = models.TextField(blank=True, null=True)
     description_binary = models.BinaryField(null=True)
     priority = models.CharField(

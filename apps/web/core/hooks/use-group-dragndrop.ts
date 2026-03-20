@@ -94,7 +94,10 @@ export const useGroupIssuesDragNDrop = (
       delete data[moduleKey];
     }
 
-    updateIssue && updateIssue(projectId, issueId, data).catch(() => setToast(errorToastProps));
+    updateIssue &&
+      updateIssue(projectId, issueId, data).catch((err: any) => {
+        console.error("Error updating issue in drag-and-drop:", err);
+      });
   };
 
   const handleOnDrop = async (source: GroupDropLocation, destination: GroupDropLocation) => {

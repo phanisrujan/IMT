@@ -59,7 +59,7 @@ export default {
   summary: "Summary",
   assigned: "Assigned",
   created: "Created",
-  subscribed: "Subscribed",
+  subscribed: "Following",
   you_do_not_have_the_permission_to_access_this_page: "You do not have the permission to access this page.",
   something_went_wrong_please_try_again: "Something went wrong. Please try again.",
   load_more: "Load more",
@@ -94,7 +94,7 @@ export default {
   failed_to_update_the_theme: "Failed to update the theme",
   email_notifications: "Email notifications",
   stay_in_the_loop_on_issues_you_are_subscribed_to_enable_this_to_get_notified:
-    "Stay in the loop on Tickets you are subscribed to. Enable this to get notified.",
+    "Stay in the loop on Tickets you are following. Enable this to get notified.",
   email_notification_setting_updated_successfully: "Email notification setting updated successfully",
   failed_to_update_email_notification_setting: "Failed to update email notification setting",
   notify_me_when: "Notify me when",
@@ -213,7 +213,7 @@ export default {
   open_project: "Open project",
   issues: "Tickets",
   cycles: "Sprints",
-  modules: "Modules",
+  modules: "Epics",
   pages: "Pages",
   intake: "Intake",
   time_tracking: "Time Tracking",
@@ -496,8 +496,8 @@ export default {
     project: "Project",
     cycle: "Sprint",
     cycles: "Sprints",
-    module: "Module",
-    modules: "Modules",
+    module: "Epic",
+    modules: "Epics",
     labels: "Labels",
     label: "Label",
     admins: "Admins",
@@ -664,8 +664,8 @@ export default {
       restore: "Restore",
       delete: "Delete",
       remove_relation: "Remove relation",
-      subscribe: "Subscribe",
-      unsubscribe: "Unsubscribe",
+      subscribe: "Follow",
+      unsubscribe: "Unfollow",
       clear_sorting: "Clear sorting",
       show_weekends: "Show weekends",
       enable: "Enable",
@@ -838,9 +838,9 @@ export default {
         failed: "Ticket could not be removed from the sprint. Please try again.",
       },
       module: {
-        loading: "Removing ticket from the module",
-        success: "Ticket removed from the module successfully.",
-        failed: "Ticket could not be removed from the module. Please try again.",
+        loading: "Removing ticket from the epic",
+        success: "Ticket removed from the epic successfully.",
+        failed: "Ticket could not be removed from the epic. Please try again.",
       },
       parent: {
         label: "Remove parent ticket",
@@ -965,8 +965,8 @@ export default {
     },
     subscription: {
       actions: {
-        subscribed: "Ticket subscribed successfully",
-        unsubscribed: "Ticket unsubscribed successfully",
+        subscribed: "You are now following this ticket",
+        unsubscribed: "You unfollowed this ticket",
       },
     },
     select: {
@@ -1187,7 +1187,7 @@ export default {
     selected_projects: "Selected projects",
     total_members: "Total members",
     total_cycles: "Total sprints",
-    total_modules: "Total modules",
+    total_modules: "Total epics",
     pending_work_items: {
       title: "Pending tickets",
       empty_state: "Analysis of pending tickets by co-workers appears here.",
@@ -1240,9 +1240,9 @@ export default {
         primary_button: {
           text: "Start your first project",
           comic: {
-            title: "Analytics works best with Sprints + Modules",
+            title: "Analytics works best with Sprints + Epics",
             description:
-              "First, timebox your tickets into Sprints and, if you can, group tickets that span more than a sprint into Modules. Check out both on the left nav.",
+              "First, timebox your tickets into Sprints and, if you can, group tickets that span more than a sprint into Epics. Check out both on the left nav.",
           },
         },
       },
@@ -1267,7 +1267,7 @@ export default {
     error: {
       permission: "You don't have permission to perform this action.",
       cycle_delete: "Failed to delete sprint",
-      module_delete: "Failed to delete module",
+      module_delete: "Failed to delete epic",
       issue_delete: "Failed to delete ticket",
     },
     state: {
@@ -1294,7 +1294,7 @@ export default {
       general: {
         title: "No active projects",
         description:
-          "Think of each project as the parent for goal-oriented work. Projects are where Jobs, Sprints, and Modules live and, along with your colleagues, help you achieve that goal. Create a new project or filter for archived projects.",
+          "Think of each project as the parent for goal-oriented work. Projects are where Jobs, Sprints, and Epics live and, along with your colleagues, help you achieve that goal. Create a new project or filter for archived projects.",
         primary_button: {
           text: "Start your first project",
           comic: {
@@ -1349,7 +1349,7 @@ export default {
       },
       subscribed: {
         title: "No tickets yet",
-        description: "Subscribe to tickets you are interested in, track all of them here.",
+        description: "Follow tickets you are interested in, track all of them here.",
       },
       "custom-view": {
         title: "No tickets yet",
@@ -1408,7 +1408,7 @@ export default {
     },
     notifications: {
       heading: "Email notifications",
-      description: "Stay in the loop on Tickets you are subscribed to. Enable this to get notified.",
+      description: "Stay in the loop on Tickets you are following. Enable this to get notified.",
     },
     security: {
       heading: "Security",
@@ -1631,7 +1631,7 @@ export default {
       overview: "Overview",
       created: "Tickets created",
       assigned: "Tickets assigned",
-      subscribed: "Tickets subscribed",
+      subscribed: "Following tickets",
       state_distribution: {
         title: "Tickets by status",
         empty: "Create tickets to view them by status in the graph for better analysis.",
@@ -1659,7 +1659,7 @@ export default {
       summary: "Summary",
       assigned: "Assigned",
       created: "Created",
-      subscribed: "Subscribed",
+      subscribed: "Following",
       activity: "Activity",
     },
     empty_state: {
@@ -1678,7 +1678,7 @@ export default {
       },
       subscribed: {
         title: "No tickets yet",
-        description: "Subscribe to tickets you are interested in, track all of them here.",
+        description: "Follow tickets you are interested in, track all of them here.",
       },
     },
   },
@@ -1858,11 +1858,11 @@ export default {
         toggle_description: "Plan work in focused timeframes.",
       },
       modules: {
-        title: "Modules",
-        short_title: "Modules",
+        title: "Epics",
+        short_title: "Epics",
         description: "Organize work into sub-projects with dedicated leads and assignees.",
-        toggle_title: "Enable modules",
-        toggle_description: "Project members will be able to create and edit modules.",
+        toggle_title: "Enable epics",
+        toggle_description: "Project members will be able to create and edit epics.",
       },
       views: {
         title: "Views",
@@ -2049,29 +2049,29 @@ export default {
     },
   },
   project_module: {
-    add_module: "Add Module",
-    update_module: "Update Module",
-    create_module: "Create Module",
-    archive_module: "Archive Module",
-    restore_module: "Restore Module",
-    delete_module: "Delete module",
+    add_module: "Add Epic",
+    update_module: "Update Epic",
+    create_module: "Create Epic",
+    archive_module: "Archive Epic",
+    restore_module: "Restore Epic",
+    delete_module: "Delete epic",
     empty_state: {
       general: {
-        title: "Map your project milestones to Modules and track aggregated work easily.",
+        title: "Map your project milestones to Epics and track aggregated work easily.",
         description:
-          "A group of tickets that belong to a logical, hierarchical parent form a module. Think of them as a way to track work by project milestones. They have their own periods and deadlines as well as analytics to help you see how close or far you are from a milestone.",
+          "A group of tickets that belong to a logical, hierarchical parent form an epic. Think of them as a way to track work by project milestones. They have their own periods and deadlines as well as analytics to help you see how close or far you are from a milestone.",
         primary_button: {
-          text: "Build your first module",
+          text: "Build your first epic",
           comic: {
-            title: "Modules help group work by hierarchy.",
+            title: "Epics help group work by hierarchy.",
             description:
-              "A cart module, a chassis module, and a warehouse module are all good example of this grouping.",
+              "A cart epic, a chassis epic, and a warehouse epic are all good example of this grouping.",
           },
         },
       },
       no_issues: {
-        title: "No tickets in the module",
-        description: "Create or add tickets which you want to accomplish as part of this module",
+        title: "No tickets in the epic",
+        description: "Create or add tickets which you want to accomplish as part of this epic",
         primary_button: {
           text: "Create new tickets",
         },
@@ -2080,26 +2080,26 @@ export default {
         },
       },
       archived: {
-        title: "No archived Modules yet",
-        description: "To tidy up your project, archive completed or cancelled modules. Find them here once archived.",
+        title: "No archived Epics yet",
+        description: "To tidy up your project, archive completed or cancelled epics. Find them here once archived.",
       },
       sidebar: {
-        in_active: "This module isn't active yet.",
+        in_active: "This epic isn't active yet.",
         invalid_date: "Invalid date. Please enter valid date.",
       },
     },
     quick_actions: {
-      archive_module: "Archive module",
+      archive_module: "Archive epic",
       archive_module_description: "Only completed or canceled\nmodule can be archived.",
-      delete_module: "Delete module",
+      delete_module: "Delete epic",
     },
     toast: {
       copy: {
-        success: "Module link copied to clipboard",
+        success: "Epic link copied to clipboard",
       },
       delete: {
-        success: "Module deleted successfully",
-        error: "Failed to delete module",
+        success: "Epic deleted successfully",
+        error: "Failed to delete epic",
       },
     },
   },
@@ -2229,7 +2229,7 @@ export default {
     filter: {
       assigned: "Assigned to me",
       created: "Created by me",
-      subscribed: "Subscribed by me",
+      subscribed: "Followed by me",
     },
     snooze: {
       "1_day": "1 day",
@@ -2278,9 +2278,9 @@ export default {
         },
       },
       module: {
-        title: "Modules are not enabled for the project.",
+        title: "Epics are not enabled for the project.",
         description:
-          "Modules are the building blocks of your project. Enable modules from project settings to start using them.",
+          "Epics are the building blocks of your project. Enable epics from project settings to start using them.",
         primary_button: {
           text: "Manage features",
         },
@@ -2392,7 +2392,7 @@ export default {
     },
     member: {
       title: "Member",
-      description: "Ability to read, write, edit, and delete entities inside projects, sprints, and modules",
+      description: "Ability to read, write, edit, and delete entities inside projects, sprints, and epics",
     },
     admin: {
       title: "Admin",
@@ -2447,7 +2447,7 @@ export default {
     all_issues: "All tickets",
     assigned: "Assigned",
     created: "Created",
-    subscribed: "Subscribed",
+    subscribed: "Following",
   },
   themes: {
     theme_options: {
@@ -2499,8 +2499,8 @@ export default {
     no_cycle: "No sprint",
   },
   module: {
-    label: "{count, plural, one {Module} other {Modules}}",
-    no_module: "No module",
+    label: "{count, plural, one {Epic} other {Epics}}",
+    no_module: "No epic",
   },
   description_versions: {
     last_edited_by: "Last edited by",
@@ -2571,10 +2571,10 @@ export default {
         unassign_from_me: "Un-assign from me",
         change_estimate: "Change estimate",
         add_to_cycle: "Add to sprint",
-        add_to_modules: "Add to modules",
+        add_to_modules: "Add to epics",
         add_labels: "Add labels",
-        subscribe: "Subscribe to notifications",
-        unsubscribe: "Unsubscribe from notifications",
+        subscribe: "Follow notifications",
+        unsubscribe: "Unfollow notifications",
         delete: "Delete",
         copy_id: "Copy ID",
         copy_id_toast_success: "Ticket ID copied to clipboard.",
@@ -2596,15 +2596,15 @@ export default {
         copy_url_toast_error: "Some error occurred while copying the sprint URL to clipboard.",
       },
       module: {
-        title: "Module actions",
-        indicator: "Module",
+        title: "Epic actions",
+        indicator: "Epic",
         add_remove_members: "Add/remove members",
         change_status: "Change status",
         add_to_favorites: "Add to favorites",
         remove_from_favorites: "Remove from favorites",
         copy_url: "Copy URL",
-        copy_url_toast_success: "Module URL copied to clipboard.",
-        copy_url_toast_error: "Some error occurred while copying the module URL to clipboard.",
+        copy_url_toast_success: "Epic URL copied to clipboard.",
+        copy_url_toast_error: "Some error occurred while copying the epic URL to clipboard.",
       },
       page: {
         title: "Page actions",
@@ -2627,7 +2627,7 @@ export default {
       create_page: "New page",
       create_view: "New view",
       create_cycle: "New sprint",
-      create_module: "New module",
+      create_module: "New epic",
       create_project: "New project",
       create_workspace: "New workspace",
     },
@@ -2642,7 +2642,7 @@ export default {
       nav_all_workspace_work_items: "Go to all tickets",
       nav_assigned_workspace_work_items: "Go to assigned tickets",
       nav_created_workspace_work_items: "Go to created tickets",
-      nav_subscribed_workspace_work_items: "Go to subscribed tickets",
+      nav_subscribed_workspace_work_items: "Go to followed tickets",
       nav_workspace_analytics: "Go to workspace analytics",
       nav_workspace_drafts: "Go to workspace drafts",
       nav_workspace_archives: "Go to workspace archives",
@@ -2651,8 +2651,8 @@ export default {
       nav_project_work_items: "Go to tickets",
       open_project_cycle: "Open a sprint",
       nav_project_cycles: "Go to sprints",
-      open_project_module: "Open a module",
-      nav_project_modules: "Go to modules",
+      open_project_module: "Open an epic",
+      nav_project_modules: "Go to epics",
       open_project_view: "Open a project view",
       nav_project_views: "Go to project views",
       nav_project_pages: "Go to pages",
@@ -2705,7 +2705,7 @@ export default {
       open_project: "Open a project",
       open_workspace_setting: "Open a workspace setting",
       open_project_cycle: "Open a sprint",
-      open_project_module: "Open a module",
+      open_project_module: "Open an epic",
       open_project_view: "Open a project view",
       open_project_setting: "Open a project setting",
       update_work_item_state: "Change status",
@@ -2713,7 +2713,7 @@ export default {
       update_work_item_assignee: "Assign to",
       update_work_item_estimate: "Change estimate",
       update_work_item_cycle: "Add to sprint",
-      update_work_item_module: "Add to modules",
+      update_work_item_module: "Add to epics",
       update_work_item_labels: "Add labels",
       update_module_member: "Change members",
       update_module_status: "Change status",

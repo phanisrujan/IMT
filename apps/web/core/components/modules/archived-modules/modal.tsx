@@ -55,7 +55,7 @@ export function ArchiveModuleModal(props: Props) {
         setToast({
           type: TOAST_TYPE.ERROR,
           title: "Error!",
-          message: "Module could not be archived. Please try again.",
+          message: "Epic could not be archived. Please try again.",
         })
       )
       .finally(() => setIsArchiving(false));

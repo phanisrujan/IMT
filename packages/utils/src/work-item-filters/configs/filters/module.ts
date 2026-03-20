@@ -53,7 +53,7 @@ export const getModuleFilterConfig =
   (params: TCreateModuleFilterParams) =>
     createFilterConfig<P>({
       id: key,
-      label: "Module",
+      label: "Epic",
       ...params,
       icon: params.filterIcon,
       supportedOperatorConfigsMap: new Map([

@@ -17,7 +17,7 @@ export default {
     analytics: "Analytics",
     work_items: "Tickets",
     cycles: "Sprints",
-    modules: "Modules",
+    modules: "Epics",
     intake: "Intake",
     drafts: "Drafts",
     favorites: "Favorites",

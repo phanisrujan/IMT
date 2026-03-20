@@ -39,7 +39,7 @@ export function ProfileStats({ userProfile }: Props) {
     {
       icon: LayerStackIcon,
       route: "subscribed",
-      i18n_title: "profile.stats.subscribed",
+      i18n_title: "profile.stats.following",
       value: userProfile?.subscribed_issues ?? "...",
     },
   ];

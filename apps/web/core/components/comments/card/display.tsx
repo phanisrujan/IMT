@@ -20,7 +20,6 @@ import { LiteTextEditor } from "@/components/editor/lite-text";
 // local imports
 import { CommentReactions } from "../comment-reaction";
 import { CommentCardEditForm } from "./edit-form";
-import { EmojiReactionButton, EmojiReactionPicker } from "@plane/propel/emoji-reaction";
 import { Avatar, Tooltip } from "@plane/ui";
 import { useMember } from "@/hooks/store/use-member";
 
@@ -57,8 +56,6 @@ export const CommentCardDisplay = observer(function CommentCardDisplay(props: TC
   } = props;
   // states
   const [highlightClassName, setHighlightClassName] = useState("");
-  // state
-  const [isPickerOpen, setIsPickerOpen] = useState(false);
   // store hooks
   const { getUserDetails } = useMember();
   // derived values
@@ -94,15 +91,6 @@ export const CommentCardDisplay = observer(function CommentCardDisplay(props: TC
     return () => clearTimeout(timeout);
   }, [isHashMatch]);
 
-  const handleEmojiSelect = useCallback(
-    (emoji: string) => {
-      if (!userReactions) return;
-      // emoji is already in decimal string format from EmojiReactionPicker
-      void activityOperations.react(comment.id, emoji, userReactions);
-    },
-    [activityOperations, comment.id, userReactions]
-  );
-
   const shouldRenderReactions = hasReactions && !disabled;
 
   return (
@@ -116,7 +104,7 @@ export const CommentCardDisplay = observer(function CommentCardDisplay(props: TC
           )}
         </div>
       )}
-      <div className="relative mb-3 flex w-full items-center gap-2">
+      <div className="relative mb-1 flex w-full items-center gap-2">
         <Avatar size="sm" name={displayName} src={getFileURL(avatarUrl)} className="shrink-0" />
         <div className="flex flex-1 flex-wrap items-center gap-1">
           <div className="text-caption-sm-medium">{displayName}</div>
@@ -135,14 +123,7 @@ export const CommentCardDisplay = observer(function CommentCardDisplay(props: TC
         </div>
         {!disabled && (
           <div className="flex shrink-0 items-center gap-1">
-            <EmojiReactionPicker
-              isOpen={isPickerOpen}
-              handleToggle={setIsPickerOpen}
-              onChange={handleEmojiSelect}
-              disabled={disabled}
-              label={<EmojiReactionButton onAddReaction={() => setIsPickerOpen(true)} />}
-              placement="bottom-start"
-            />
+            <CommentReactions comment={comment} disabled={disabled} activityOperations={activityOperations} />
             {renderQuickActions ? renderQuickActions() : null}
           </div>
         )}
@@ -167,21 +148,13 @@ export const CommentCardDisplay = observer(function CommentCardDisplay(props: TC
             initialValue={comment.comment_html ?? ""}
             workspaceId={workspaceId}
             workspaceSlug={workspaceSlug}
-            containerClassName={cn("!py-1 transition-[border-color] duration-500", highlightClassName)}
+            containerClassName={cn("!py-0 transition-[border-color] duration-500", highlightClassName)}
             projectId={projectId?.toString()}
             displayConfig={{
               fontSize: "small-font",
             }}
             parentClassName="border-none"
           />
-          {shouldRenderReactions &&
-            (renderFooter ? (
-              renderFooter(
-                <CommentReactions comment={comment} disabled={disabled} activityOperations={activityOperations} />
-              )
-            ) : (
-              <CommentReactions comment={comment} disabled={disabled} activityOperations={activityOperations} />
-            ))}
         </>
       )}
     </div>

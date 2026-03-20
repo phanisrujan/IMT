@@ -25,6 +25,9 @@ class UserSerializer(BaseSerializer):
             raise serializers.ValidationError("Last name cannot contain a URL.")
         return value
 
+    # Override the restrictive DB URLField constraint to accept local relative `/api/assets` paths
+    cover_image = serializers.CharField(max_length=800, allow_blank=True, allow_null=True, required=False)
+
     class Meta:
         model = User
         # Exclude password field from the serializer

@@ -80,22 +80,24 @@ class IssueSerializer(BaseSerializer):
             raise serializers.ValidationError("Start date cannot exceed target date")
 
         try:
-            if data.get("description_html", None) is not None:
-                parsed = html.fromstring(data["description_html"])
-                parsed_str = html.tostring(parsed, encoding="unicode")
-                data["description_html"] = parsed_str
+            for html_field in ["description_html", "ica_html", "pca_html", "rca_html"]:
+                if data.get(html_field, None) is not None:
+                    parsed = html.fromstring(data[html_field])
+                    parsed_str = html.tostring(parsed, encoding="unicode")
+                    data[html_field] = parsed_str
 
         except Exception:
             raise serializers.ValidationError("Invalid HTML passed")
 
         # Validate description content for security
-        if data.get("description_html"):
-            is_valid, error_msg, sanitized_html = validate_html_content(data["description_html"])
-            if not is_valid:
-                raise serializers.ValidationError({"error": "html content is not valid"})
-            # Update the data with sanitized HTML if available
-            if sanitized_html is not None:
-                data["description_html"] = sanitized_html
+        for html_field in ["description_html", "ica_html", "pca_html", "rca_html"]:
+            if data.get(html_field):
+                is_valid, error_msg, sanitized_html = validate_html_content(data[html_field])
+                if not is_valid:
+                    raise serializers.ValidationError({"error": f"{html_field} content is not valid"})
+                # Update the data with sanitized HTML if available
+                if sanitized_html is not None:
+                    data[html_field] = sanitized_html
 
         if data.get("description_binary"):
             is_valid, error_msg = validate_binary_data(data["description_binary"])

@@ -93,7 +93,7 @@ export const GeneralProfileSettingsForm = observer(function GeneralProfileSettin
   const handleProfilePictureDelete = async (url: string | null | undefined) => {
     if (!url) return;
     await updateCurrentUser({
-      avatar_url: "",
+      avatar: "",
     })
       .then(() => {
         setToast({
@@ -121,7 +121,7 @@ export const GeneralProfileSettingsForm = observer(function GeneralProfileSettin
     const userPayload: Partial<IUser> = {
       first_name: formData.first_name,
       last_name: formData.last_name,
-      avatar_url: formData.avatar_url,
+      avatar: formData.avatar_url, // Maps local form state `avatar_url` securely to backend DB writeable field `avatar`
       display_name: formData?.display_name,
     };
 

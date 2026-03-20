@@ -113,7 +113,7 @@ export const getSubscriberFilterConfig =
   (params: TCreateSubscriberFilterParams) =>
     createFilterConfig<P>({
       id: key,
-      label: "Subscriber",
+      label: "Following",
       ...params,
       icon: params.filterIcon,
       supportedOperatorConfigsMap: new Map([

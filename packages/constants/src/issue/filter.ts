@@ -343,10 +343,7 @@ export type TActivityFilterOption = {
 };
 
 export const defaultActivityFilters: TActivityFilters[] = [
-  EActivityFilterType.ACTIVITY,
   EActivityFilterType.COMMENT,
-  EActivityFilterType.STATE,
-  EActivityFilterType.ASSIGNEE,
 ];
 
 export const filterActivityOnSelectedFilters = (

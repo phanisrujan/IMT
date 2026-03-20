@@ -61,7 +61,7 @@ export const ModuleQuickActions = observer(function ModuleQuickActions(props: Pr
       setToast({
         type: TOAST_TYPE.SUCCESS,
         title: "Link Copied!",
-        message: "Module link copied to clipboard.",
+        message: "Epic link copied to clipboard.",
       });
     });
   const handleOpenInNewTab = () => window.open(`/${moduleLink}`, "_blank");
@@ -79,7 +79,7 @@ export const ModuleQuickActions = observer(function ModuleQuickActions(props: Pr
       setToast({
         type: TOAST_TYPE.ERROR,
         title: "Error!",
-        message: "Module could not be restored. Please try again.",
+        message: "Epic could not be restored. Please try again.",
       });
     }
   };

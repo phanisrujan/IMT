@@ -77,9 +77,9 @@ export const LinkCreateUpdateModal = observer(function LinkCreateUpdateModal(pro
           </h3>
           <div className="mt-2 space-y-3">
             <div>
-              <label htmlFor="url" className="mb-2 text-14 font-medium text-secondary">
-                {t("link.modal.url.text")}
-                <span className="block text-10">{t("required")}</span>
+              <label htmlFor="url" className="mb-2 block text-secondary">
+                {t("link.modal.url.text")}{" "}
+                <span className="text-caption-xs-regular text-custom-text-400">({t("required")})</span>
               </label>
               <Controller
                 control={control}
@@ -103,9 +103,9 @@ export const LinkCreateUpdateModal = observer(function LinkCreateUpdateModal(pro
               {errors.url && <span className="text-11 text-danger-primary">{t("link.modal.url.required")}</span>}
             </div>
             <div>
-              <label htmlFor="title" className="mb-2 text-14 font-medium text-secondary">
-                {t("link.modal.title.text")}
-                <span className="block text-10">{t("optional")}</span>
+              <label htmlFor="title" className="mb-2 block text-secondary">
+                {t("link.modal.title.text")}{" "}
+                <span className="text-caption-xs-regular text-custom-text-400">({t("optional")})</span>
               </label>
               <Controller
                 control={control}

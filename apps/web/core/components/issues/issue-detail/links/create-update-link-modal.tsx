@@ -84,7 +84,7 @@ export const IssueLinkCreateUpdateModal = observer(function IssueLinkCreateUpdat
           </h3>
           <div className="mt-2 space-y-3">
             <div>
-              <label htmlFor="url" className="mb-2 text-secondary">
+              <label htmlFor="url" className="mb-2 block text-secondary">
                 {t("common.url")}
               </label>
               <Controller
@@ -111,9 +111,9 @@ export const IssueLinkCreateUpdateModal = observer(function IssueLinkCreateUpdat
               )}
             </div>
             <div>
-              <label htmlFor="title" className="mb-2 text-secondary">
-                {t("common.display_title")}
-                <span className="block text-caption-xs-regular">{t("common.optional")}</span>
+              <label htmlFor="title" className="mb-2 block text-secondary">
+                {t("common.display_title")}{" "}
+                <span className="text-caption-xs-regular text-custom-text-400">({t("common.optional")})</span>
               </label>
               <Controller
                 control={control}

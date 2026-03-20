@@ -81,7 +81,7 @@ export const ModuleCardItem = observer(function ModuleCardItem(props: Props) {
       loading: "Adding module to favorites...",
       success: {
         title: "Success!",
-        message: () => "Module added to favorites.",
+        message: () => "Epic added to favorites.",
       },
       error: {
         title: "Error!",
@@ -105,7 +105,7 @@ export const ModuleCardItem = observer(function ModuleCardItem(props: Props) {
       loading: "Removing module from favorites...",
       success: {
         title: "Success!",
-        message: () => "Module removed from favorites.",
+        message: () => "Epic removed from favorites.",
       },
       error: {
         title: "Error!",
@@ -127,14 +127,14 @@ export const ModuleCardItem = observer(function ModuleCardItem(props: Props) {
         setToast({
           type: TOAST_TYPE.SUCCESS,
           title: "Success!",
-          message: "Module updated successfully.",
+          message: "Epic updated successfully.",
         });
       })
       .catch((err) => {
         setToast({
           type: TOAST_TYPE.ERROR,
           title: "Error!",
-          message: err?.detail ?? "Module could not be updated. Please try again.",
+          message: err?.detail ?? "Epic could not be updated. Please try again.",
         });
       });
   };

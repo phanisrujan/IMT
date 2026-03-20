@@ -27,13 +27,13 @@ DEFAULT_STATES = [
         "color": "#0693E3",
         "sequence": 40000,
         "group": StateGroup.BACKLOG.value,
-        "default": True,
     },
     {
         "name": "Todo",
         "color": "#60646C",
         "sequence": 25000,
         "group": StateGroup.UNSTARTED.value,
+        "default": True,
     },
     {
         "name": "In Progress",

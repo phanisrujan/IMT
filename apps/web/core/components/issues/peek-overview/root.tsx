@@ -84,11 +84,7 @@ export const IssuePeekOverview = observer(function IssuePeekOverview(props: IWor
               return;
             })
             .catch((error) => {
-              setToast({
-                title: t("toast.error"),
-                type: TOAST_TYPE.ERROR,
-                message: t("entity.update.failed", { entity: t("issue.label", { count: 1 }) }),
-              });
+              console.error("Error in updating issue from peek overview:", error);
             });
         }
       },

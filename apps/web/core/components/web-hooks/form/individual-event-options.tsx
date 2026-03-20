@@ -31,7 +31,7 @@ export const INDIVIDUAL_WEBHOOK_OPTIONS: {
   },
   {
     key: "module",
-    label: "Modules",
+    label: "Epics",
     description: "Module created, updated, or deleted",
   },
   {

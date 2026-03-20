@@ -4,7 +4,8 @@
  * See the LICENSE file for details.
  */
 
-import { isEqual, concat, get, indexOf, isEmpty, orderBy, pull, set, uniq, update, clone } from "lodash-es";
+import { isEqual, isNil, concat, get, indexOf, isEmpty, orderBy, pull, set, uniq, update, clone } from "lodash-es";
+import { TOAST_TYPE, setToast } from "@plane/propel/toast";
 import { action, computed, makeObservable, observable, runInAction } from "mobx";
 import { computedFn } from "mobx-utils";
 // plane constants
@@ -579,10 +580,19 @@ export abstract class BaseIssuesStore implements IBaseIssuesStore {
 
       // call fetch Parent Stats
       this.fetchParentStats(workspaceSlug, projectId);
-    } catch (error) {
+    } catch (error: any) {
       // If errored out update store again to revert the change
       this.rootIssueStore.issues.updateIssue(issueId, issueBeforeUpdate ?? {});
       this.updateIssueList(issueBeforeUpdate, { ...issueBeforeUpdate, ...data } as TIssue);
+      
+      const errorMessage =
+        error?.error?.[0] || error?.error || error?.non_field_errors?.[0] || "Failed to update the ticket.";
+      setToast({
+        type: TOAST_TYPE.ERROR,
+        title: "Error!",
+        message: errorMessage,
+      });
+
       throw error;
     }
   }

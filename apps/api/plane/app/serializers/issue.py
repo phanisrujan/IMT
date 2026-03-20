@@ -193,6 +193,23 @@ class IssueCreateSerializer(BaseSerializer):
         ):
             raise serializers.ValidationError("Estimate point is not valid please pass a valid estimate_point_id")
 
+        # Custom IMT Business Rule: Block Completed transitions without populated ICA/PCA/RCA
+        state_obj = attrs.get("state") or getattr(getattr(self, "instance", None), "state", None)
+
+        if state_obj and getattr(state_obj, "group", None) == "completed":
+            ica_html = attrs.get("ica_html") if "ica_html" in attrs else getattr(getattr(self, "instance", None), "ica_html", "")
+            pca_html = attrs.get("pca_html") if "pca_html" in attrs else getattr(getattr(self, "instance", None), "pca_html", "")
+            rca_html = attrs.get("rca_html") if "rca_html" in attrs else getattr(getattr(self, "instance", None), "rca_html", "")
+
+            def has_content(html_str):
+                if not html_str:
+                    return False
+                cleaned = str(html_str).replace("<p></p>", "").replace("<p><br></p>", "").replace("<br>", "").replace(" ", "").strip()
+                return bool(cleaned)
+
+            if not has_content(ica_html) or not has_content(pca_html) or not has_content(rca_html):
+                raise serializers.ValidationError({"error": "ICA, PCA, and RCA must be filled out before marking a ticket as Completed."})
+
         return attrs
 
     def create(self, validated_data):

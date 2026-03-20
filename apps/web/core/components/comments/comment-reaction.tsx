@@ -9,7 +9,7 @@ import { useMemo, useState } from "react";
 import { observer } from "mobx-react";
 // plane imports
 import { stringToEmoji } from "@plane/propel/emoji-icon-picker";
-import { EmojiReactionGroup, EmojiReactionPicker } from "@plane/propel/emoji-reaction";
+import { EmojiReaction, EmojiReactionButton, EmojiReactionPicker } from "@plane/propel/emoji-reaction";
 import type { EmojiReactionType } from "@plane/propel/emoji-reaction";
 import type { TCommentsOperations, TIssueComment } from "@plane/types";
 import { cn } from "@plane/utils";
@@ -70,26 +70,31 @@ export const CommentReactions = observer(function CommentReactions(props: TProps
   // Don't render anything if there are no reactions and it's disabled
   if (reactions.length === 0 && disabled) return null;
 
-  // Don't show the add button if there are no reactions
+  // Don't show the add button if it is disabled, or if there are no reactions
   const showAddButton = !disabled && reactions.length > 0;
 
   return (
-    <div className="relative">
-      <EmojiReactionPicker
-        isOpen={isPickerOpen}
-        handleToggle={setIsPickerOpen}
-        onChange={handleEmojiSelect}
-        disabled={disabled}
-        label={
-          <EmojiReactionGroup
-            reactions={reactions}
-            onReactionClick={handleReactionClick}
-            showAddButton={showAddButton}
-            onAddReaction={() => setIsPickerOpen(true)}
-          />
-        }
-        placement="bottom-start"
-      />
+    <div className="flex min-h-7 items-center gap-1">
+      {reactions.map((reaction, index) => (
+        <EmojiReaction
+          key={`${reaction.emoji}-${index}`}
+          emoji={reaction.emoji}
+          count={reaction.count}
+          reacted={reaction.reacted}
+          users={reaction.users?.slice(0, 5)}
+          onReactionClick={handleReactionClick}
+        />
+      ))}
+      {showAddButton && (
+        <EmojiReactionPicker
+          isOpen={isPickerOpen}
+          handleToggle={setIsPickerOpen}
+          onChange={handleEmojiSelect}
+          disabled={disabled}
+          label={<EmojiReactionButton onAddReaction={() => setIsPickerOpen(true)} />}
+          placement="bottom-start"
+        />
+      )}
     </div>
   );
 });
